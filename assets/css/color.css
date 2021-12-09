@@ -1,0 +1,78 @@
+
+/*****************************************
+	Background & Font Color Styles
+******************************************/
+
+.bg-blue {
+	background-color: #11519D;
+}
+
+.bg-grad-pink {
+	background: linear-gradient(153.04deg, #ff8f8f 2.43%, #ff6190 98.23%);
+}
+
+.bg-grad-pink-blue {
+	background: linear-gradient(153.04deg, #ED9AFF 2.43%, #425DF0 98.23%);
+}
+
+.bg-grad-blue {
+	background: linear-gradient(180deg, #3ea8f2 0%, #4c72df 100%);
+}
+
+.bg-grad-primary-blue {
+
+	background: linear-gradient(180deg, #4C75DF -22.75%, #034EA1 100%);
+}
+
+.bg-grad-orange {
+	background: linear-gradient(180deg, #ffc536 0%, #ff7a2e 100%);
+}
+
+.bg-grad-green {
+	background: linear-gradient(153.04deg, #6CF5CD 2.43%, #3CAEE0 98.23%);
+}
+
+.bg-grad-moonrise {
+	background: #10b981;
+	background: -webkit-linear-gradient(to bottom, #bef264, #10b981);
+	background: linear-gradient(to bottom, #bef264, #10b981);
+}
+
+.bg-grad-dark-pink {
+	background: #10b981;
+	background: -webkit-linear-gradient(to bottom, #ec4899, #f43f5e);
+	background: linear-gradient(to bottom, #ec4899, #f43f5e);
+}
+
+.bg-andaje {
+	visibility: hidden;
+	background: rgba(0, 188, 212, .70);
+	background: -webkit-linear-gradient(320deg, rgba(0, 188, 212, 0.7), #1495b9, rgba(0, 82, 185, 0.6));
+	background: -o-linear-gradient(320deg, rgba(0, 188, 212, .70), #1495b9, rgba(0, 82, 185, 0.7));
+	background: linear-gradient(130deg, rgba(0, 188, 212, .70), #1495b9, rgba(0, 82, 185, 0.7));
+	-webkit-transition: all .5s ease .1s;
+	-o-transition: all .5s ease .1s;
+	transition: all .5s ease .1s;
+	-webkit-transform: scale3d(0, 1, 0);
+	-ms-transform: scale3d(0, 1, 0);
+	-o-transform: scale3d(0, 1, 0);
+	transform: scale3d(0, 1, 0);
+	-webkit-transform-origin: center;
+	-ms-transform-origin: center;
+	-o-transform-origin: center;
+	transform-origin: center;
+}
+
+.bg-grad-green-2 {
+	background: linear-gradient(135deg, #ffe643 0, #409844 100%);
+}
+
+
+.bg-grad-red-orange {
+	background: linear-gradient(135deg, #d32f20 0, #f6802b 100%);
+}
+
+
+.bg-grad-light-purple{
+	background: radial-gradient( circle 879px at 10.4% 22.3%,  rgba(255,235,238,1) 0%, rgba(186,190,245,1) 93.6% )
+}
