@@ -92,62 +92,39 @@
 	});
 
 
-	function mousecursor() {
-		if ($("body")) {
-			const e = document.querySelector(".cursor-inner"),
-				t = document.querySelector(".cursor-outer");
-			let n, i = 0,
-				o = !1;
-			window.onmousemove = function (s) {
-				o || (t.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)"), e.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)", n = s.clientY, i = s.clientX
-			}, 
-			$("body").on("mouseenter", "a, button, .cursor-pointer", function () {
-				e.classList.add("cursor-hover"), t.classList.add("cursor-hover")
-			}),
-			$("body").on("mouseleave", "a, button, .cursor-pointer", function () {
-				$(this).is("a") && $(this).closest(".cursor-pointer").length || (e.classList.remove("cursor-hover"), t.classList.remove("cursor-hover"))
-			}),
-			e.style.visibility = "visible", t.style.visibility = "visible"
-		}
-	};
-	
-	$(function () {
-		mousecursor();
+	$(".download-selfcare-app-box").each(function () {
+		var $this = $(this);
+		$this.clone().attr("class", "download-selfcare-app-box").appendTo(".selfcare-app-box-mobile");
 	});
 	
-	$(".showHide-box").click(function(){
-		$(".fixed-bottom-box").toggleClass("box-toggled");
+
+	$(".site-quick-links").each(function () {
+		var $this = $(this);
+		$this.clone().attr("class", "menu-links").appendTo("#siteQuickLinks");
 	});
 	
-	$(function (){
-		setTimeout(function(){
-			$(".fixed-bottom-box").addClass("wow fadeInUpBig")
-		}, 1000);
-	})
+
+	$(".other-page-links").each(function () {
+		var $this = $(this);
+		$this.clone().attr("class", "menu-links").appendTo("#otherPageLinks");
+	});
+	
+
+	$(".footer-right-container .contact-details").each(function () {
+		var $this = $(this);
+		$this.clone().appendTo("#contactUsDetails");
+	});
+
+	$(".footer-right-container .footer-social-links").each(function () {
+		var $this = $(this);
+		$this.clone().attr("class", "social-links").appendTo(".mobile-social-link-box");
+	});
+	
+
 	
 	
-	$(function (){
-		setTimeout(function(){
-			$(".fixed-bottom-box").addClass("box-toggled")
-		}, 10000);
-	})
 
 
 })(window.jQuery);
 
-var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-if (isMobile) {
-	
-	$(function (){
-		setTimeout(function(){
-			$(".fixed-bottom-box").css("opacity", "1")
-		}, 3000);
-	})
-
-	$(function (){
-		setTimeout(function(){
-			$(".fixed-bottom-box").addClass("box-toggled")
-		}, 6000);
-	})
-}
 
