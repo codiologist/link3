@@ -105,8 +105,8 @@ img {
 
 .btn.focus,
 .btn:focus {
-    outline: 0;
-    box-shadow: none;
+	outline: 0;
+	box-shadow: none;
 }
 
 .form-control {}
@@ -393,23 +393,32 @@ img {
 
 
 
+::placeholder{
+	color: #B2BEB5 !important;
+	font-weight: 500 !important;
+	font-size: 16px !important;
+}
+
 ::-webkit-input-placeholder {
-	color: inherit;
+	color: #B2BEB5 !important;
+	font-weight: 500 !important;
 }
 
 ::-moz-input-placeholder {
-	color: inherit;
+	color: #B2BEB5 !important;
+	font-weight: 500 !important;
 }
 
 ::-ms-input-placeholder {
-	color: inherit;
+	color: #B2BEB5 !important;
+	font-weight: 500 !important;
 }
 
 .page-container {
 	position: relative;
 }
 
-.hide-on-mobile{
+.hide-on-mobile {
 	display: block !important;
 }
 
@@ -1299,10 +1308,86 @@ img {
 }
 
 
+/*****************************************
+	Slick Slider Styles
+******************************************/
+
+.slick-dots {
+	bottom: 20px;
+}
+
+.slick-dots li button {
+	position: relative;
+}
+
+.slick-dots li button:before {
+	display: none;
+
+}
+
+.slick-dots li::before {
+	position: absolute;
+	content: "";
+	width: 10px;
+	height: 10px;
+	background: #FD5602;
+	border-radius: 10px;
+	transition: all .3s;
+	top: 5px;
+	left: 5px;
+}
+
+.slick-dots li::after {
+	position: absolute;
+	content: "";
+	width: 8px;
+	height: 8px;
+	background: #fff;
+	border-radius: 8px;
+	transition: all .3s;
+	left: 6px;
+	top: 6px;
+}
+
+
+.slick-dots li.slick-active::before {
+	background: #FF8303;
+}
+
+.slick-dots li.slick-active::after {
+	background: #FD5602;
+}
+
 
 /*========================================================================================
 	5. Template Common Components Styles
 ========================================================================================*/
+
+/*****************************************
+	Section Title Styles
+******************************************/
+.section-title {
+	position: relative;
+	text-align: center;
+}
+
+.section-title h2.title {
+	font-size: 40px;
+	line-height: 46px;
+	font-weight: 700;
+	color: #2E2C2C;
+}
+
+.section-title h2.title span {
+	color: #FD5602;
+}
+
+.section-title p.sub-text {
+	font-size: 20px;
+	line-height: 23px;
+	font-weight: 500;
+	color: #676767;
+}
 
 /*****************************************
 	Social Links Styles
@@ -1445,13 +1530,13 @@ ul.icon-list-box li .text p {
 	color: #2E2C2C;
 }
 
-ul.icon-list-box li .text a{
+ul.icon-list-box li .text a {
 	color: #2E2C2C;
 	transition: all .3s;
 
 }
 
-ul.icon-list-box li .text a:hover{
+ul.icon-list-box li .text a:hover {
 	color: #FD5602;
 }
 
@@ -1502,7 +1587,7 @@ ul.icon-list-box li .text a:hover{
 	background-repeat: no-repeat;
 	background-size: 20px;
 	transition: all .3s;
-	
+
 }
 
 .custom-accordion .card .card-header h2 .btn.collapsed::before {
@@ -1520,12 +1605,197 @@ ul.icon-list-box li .text a:hover{
 	width: 100%;
 	height: 100%;
 	content: '';
-	background-image: url(../img/lines-1.png);
+	/* background-image: url(../img/lines-1.png); */
 	background-size: 100%;
 	background-position: top right;
 	background-repeat: no-repeat;
 	opacity: .5;
+}
 
+/*****************************************
+	Link3 Custom Tab Content Styles
+******************************************/
+
+
+.link3-custom-tab-container{
+    position: relative;
+}
+
+.link3-custom-tab-container .tab-custom-nav-box {
+	/* margin-top: 50px; */
+	text-align: center;
+    margin-bottom: 40px;
+}
+
+.link3-custom-tab-container .tab-custom-nav-box .nav.nav-tabs {
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	border: none;
+	display: inline-flex;
+    background-color: #F2F3F4;
+    border-radius: 50px;
+
+}
+
+.link3-custom-tab-container .tab-custom-nav-box .nav.nav-tabs .nav-link {
+	width: 160px;
+	border-radius: 0px;
+	font-size: 18px;
+	font-weight: 700;
+	border: none;
+	padding: 12px 0;
+	text-transform: capitalize;
+	color: #676767;
+	transition: all 0.2s;
+}
+
+.link3-custom-tab-container .tab-custom-nav-box .nav.nav-tabs .nav-link:hover{
+    color: #FD5602;
+}
+
+.link3-custom-tab-container .tab-custom-nav-box .nav.nav-tabs .nav-link.active {
+    background-color: #FD5602;
+    color: #fff;
+    border-radius: 50px;
+
+}
+
+
+/*=============================================================
+	Form Components Styles
+=============================================================*/
+/*****************************************
+	Link3 Common Form Styles
+******************************************/
+
+.link3-common-form {
+	position: relative;
+	background-color: #fff;
+}
+
+
+.link3-common-form label {
+    font-family: 'Roboto', sans-serif;
+	font-size: 15px;
+	font-weight: 500;
+	color: #676767;
+}
+
+.link3-common-form .form-group {
+	position: relative;
+	margin-bottom: 30px;
+}
+
+.link3-common-form .form-group .custom-input-group {
+	position: relative;
+}
+
+.link3-common-form .form-group .custom-input-group .icon {
+	position: absolute;
+	top: 0;
+	left: 8px;
+	line-height: 40px;
+	color: #676767;
+}
+
+.link3-common-form .form-group .custom-input-group .icon i {
+	font-size: 20px;
+}
+
+.link3-common-form .form-group .input-group {}
+
+.link3-common-form .input-group-text {
+	background-color: #B2BEB5;
+	border-color: #B2BEB5;
+	color: #676767;
+}
+
+.link3-common-form .form-group .form-control{
+    background-color: #F2F3F4;
+}
+
+
+.link3-common-form .form-group .form-control:focus{
+	border-color: #B2BEB5;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(178 190 181 / 25%);
+}
+
+.link3-common-form .form-group input.form-control {
+	font-size: 14px;
+	height: 40px;
+	padding-left: 35px;
+}
+
+.link3-common-form .submit-btn-box{
+    margin-top: 50px;
+}
+
+
+/*****************************************
+	Custom Check Box Styles
+******************************************/
+
+
+.link3-custom-checkbox {
+    width: 100%;
+    /* padding-bottom: 6px; */
+    margin-bottom: 20px;
+}
+
+.link3-custom-checkbox input {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+}
+
+.link3-custom-checkbox label {
+    position: relative;
+    cursor: pointer;
+    padding-left: 30px;
+    line-height: 25px;
+    color: #152c5b;
+}
+
+.link3-custom-checkbox label span.checkbox-icon {
+    content: '';
+    -webkit-appearance: none;
+    background-color: #fff;
+    border: 2px solid #FD5602;
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 10px;
+    /*border-radius: 40px;*/
+    transition: 0.3s;
+    position: absolute;
+    left: 0;
+    top: 2px;
+}
+
+.link3-custom-checkbox input+label span.checkbox-icon:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    font-family: 'Material Icons Sharp';
+    content: 'check';
+    font-size: 16px;
+    color: #FD5602;
+    transition: all 0.35s cubic-bezier(0.3, -.41, .19, 2), opacity 0.3s;
+}
+
+.link3-custom-checkbox input:checked+label span.checkbox-icon:after {
+    /* transform: scale(1); */
+    opacity: 1;
 }
 
 
@@ -1536,7 +1806,7 @@ ul.icon-list-box li .text a:hover{
 .footer {
 	position: relative;
 	background-color: #F2F3F4;
-	padding-top: 220px;
+	padding-top: 60px;
 	z-index: 2;
 	overflow: hidden;
 }
@@ -1702,40 +1972,40 @@ ul.icon-list-box li .text a:hover{
 	left: 6px;
 }
 
-.footer-mobile-widget-container{
+.footer-mobile-widget-container {
 	position: relative;
 }
 
 .footer-mobile-widget-container .custom-accordion .card {
 	border: none;
-	border-bottom: 1px solid #B2BEB5 ;
+	border-bottom: 1px solid #B2BEB5;
 }
 
-.footer-mobile-widget-container .custom-accordion .card .card-header{
+.footer-mobile-widget-container .custom-accordion .card .card-header {
 	border: none;
 }
 
-.footer-mobile-widget-container .custom-accordion .card .card-header h2 .btn{
+.footer-mobile-widget-container .custom-accordion .card .card-header h2 .btn {
 	padding-left: 0;
 	padding-bottom: 15px;
 }
 
 
-.footer-mobile-widget-container .custom-accordion .card .card-header h2 .btn::before{
+.footer-mobile-widget-container .custom-accordion .card .card-header h2 .btn::before {
 	right: 0;
 }
 
-.footer-mobile-widget-container .custom-accordion .card-body{
+.footer-mobile-widget-container .custom-accordion .card-body {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	padding-left: 5px;
 }
 
-.footer-mobile-widget-container .contact-details ul.icon-list-box li .icon{
+.footer-mobile-widget-container .contact-details ul.icon-list-box li .icon {
 	width: 12%;
 }
 
-.footer-mobile-widget-container .contact-details ul.icon-list-box li .icon i{
+.footer-mobile-widget-container .contact-details ul.icon-list-box li .icon i {
 	font-size: 22px;
 }
 
@@ -1747,19 +2017,522 @@ ul.icon-list-box li .text a:hover{
 	padding-bottom: 10px;
 }
 
-.footer .mobile-social-link-box::before{
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    content: '';
-    width: 85%;
-    margin: 0 auto;
-    background: #676767;
-	border-bottom:  0.038rem solid #676767;
+.footer .mobile-social-link-box::before {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	content: '';
+	width: 85%;
+	margin: 0 auto;
+	background: #676767;
+	border-bottom: 0.038rem solid #676767;
 }
 
 
 /*========================================================================================
 	7. Home Page Styles
 ========================================================================================*/
+.home-page {}
+
+/*****************************************
+	Home Slider Styles
+******************************************/
+
+.home-slider-section {
+	position: relative;
+}
+
+.home-slider-section .home-slider {}
+
+.home-slider-section .home-slider .slide-item .banner-image {}
+
+.home-slider-section .home-slider .slide-item .banner-image img.desktop-banner {
+	display: block;
+}
+
+.home-slider-section .home-slider .slide-item .banner-image img.mobile-banner {
+	display: none;
+}
+
+/*****************************************
+	 Package Customizer Styles
+******************************************/
+.package-customizer-section {
+	position: relative;
+	padding: 40px 0 10px;
+}
+
+.package-customizer-container {
+	position: relative;
+	margin: 60px 0;
+}
+
+.package-customizer-inner {
+	position: relative;
+}
+
+.package-customizer-card {
+	position: relative;
+	transition: all .3s;
+	background-color: #F2F3F4;
+	min-height: 150px;
+	margin-bottom: 40px;
+}
+
+.package-customizer-card.show{
+	background-color: transparent;
+	transition: all 0.5s;
+    transition-delay: 0.3s;
+	border-radius: 30px;
+}
+
+.package-customizer-card .front-box {
+	position: relative;
+	width: 100%;
+}
+
+.package-customizer-card .front-box .front-box-inner {
+	position: relative;
+	padding: 20px 25px;
+	border-radius: 30px;
+}
+
+.package-customizer-card .front-box .front-box-inner .number-box {}
+
+.package-customizer-card .front-box .front-box-inner .show-filterbox-btn {
+	position: absolute;
+	right: 20px;
+	top: 17px;
+	width: 40px;
+	height: 40px;
+	pointer-events: all;
+	border-radius: 30px;
+	transition: all .3s;
+	background-color: #FF8303;
+	cursor: pointer;
+	z-index: 3;
+}
+
+.package-customizer-card.show .front-box .front-box-inner .show-filterbox-btn {
+	z-index: 5;
+}
+
+.package-customizer-card .front-box .front-box-inner .show-filterbox-btn::after {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	content: "";
+	width: 0;
+	height: 0;
+	width: 18px;
+	height: 18px;
+	transition: all .3s;
+	background-image: url(../img/icons/icon-chevron-down-white.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100%;	
+}
+
+.package-customizer-card .popup-box {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	opacity: 0;
+	transition: all 0.3s;
+	z-index: 1;
+}
+
+
+
+.package-customizer-card .popup-box .popup-box-inner {
+	width: 100%;
+	border-radius: 30px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	min-height: 200px;
+	height: auto;
+	padding: 20px 25px;
+	box-sizing: border-box;
+	transition: all 0s;
+	opacity: 1;
+	pointer-events: none;
+}
+
+
+.package-customizer-card .popup-box .popup-box-inner .bg {
+	box-shadow: 0 0px 50px rgb(0 0 0 / 26%);
+	position: absolute;
+	width: 100%;
+	right: 0px;
+	top: 0px;
+	height: 0px;
+	border-radius: 30px;
+	box-sizing: border-box;
+	opacity: 0;
+	background: #FDF0E3;
+}
+
+.package-customizer-card .front-box .front-box-inner .title,
+.package-customizer-card .popup-box .popup-box-inner .title {
+	margin-bottom: 20px;
+}
+
+.package-customizer-card .front-box .front-box-inner .title h3,
+.package-customizer-card .popup-box .popup-box-inner .title h3 {
+	font-size: 20px;
+	line-height: 30px;
+	font-weight: 700;
+	margin: 0;
+	color: #FD5602;
+}
+
+.package-customizer-card .front-box .front-box-inner p.sub-text,
+.package-customizer-card .popup-box .popup-box-inner p.sub-text{
+	font-size: 21px;
+	font-weight: 500;
+	margin: 0;
+	color: #676767;
+	margin-bottom: 0;
+	margin-top: 22px;
+}
+
+
+.package-customizer-card .front-box .front-box-inner .tag,
+.package-customizer-card .popup-box .popup-box-inner .tag {
+	font-size: 18px;
+	font-weight: 500;
+}
+
+.package-customizer-card .front-box .front-box-inner .startNum,
+.package-customizer-card .popup-box .popup-box-inner .startNum {
+	font-size: 30px;
+	line-height: 30px;
+	font-weight: 900;
+}
+
+.package-customizer-card .front-box .front-box-inner .seperator,
+.package-customizer-card .popup-box .popup-box-inner .seperator {
+	font-size: 30px;
+	line-height: 30px;
+	font-weight: 900;
+}
+
+.package-customizer-card .front-box .front-box-inner .endNum,
+.package-customizer-card .popup-box .popup-box-inner .endNum {
+	font-size: 30px;
+	line-height: 30px;
+	font-weight: 900;
+}
+
+.package-customizer-card .popup-box .popup-box-inner .range-customizer-box {
+	margin-top: 45px;
+	opacity: 0;
+}
+
+.package-customizer-card.show{
+	position: relative;
+}
+
+.package-customizer-card.show .popup-box,
+.package-customizer-card.show .popup-box .popup-box-inner{
+	pointer-events: all;
+	opacity: 1;
+	transition: all 0.3s;
+	z-index: 4;
+}
+
+.package-customizer-card.show  .popup-box .popup-box-inner .range-customizer-box{
+	opacity: 1;
+    transition: all 0.8s;
+    transition-delay: 0.3s;
+}
+
+.package-customizer-card.show .popup-box .popup-box-inner .bg{
+	-webkit-animation: BgShow .5s forwards;
+	-moz-animation: BgShow .5s forwards;
+	-o-animation: BgShow .5s forwards;
+	animation: BgShow .5s forwards;
+	animation-timing-function: cubic-bezier(1, 0.01, 0.3, 1);
+	z-index: -1;
+
+}
+
+
+.package-customizer-card.show .front-box .front-box-inner .show-filterbox-btn::after {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	content: "";
+	width: 0;
+	height: 0;
+	width: 22px;
+	height: 22px;
+	background-image: url(../img/icons/icon-clear-white.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100%;	
+}
+
+
+.package-customizer-section .customizer-btn-box{
+	text-align: center;
+	margin-top: 20px;
+}
+
+.special-addon-customizer{
+	position: relative;
+}
+
+.addon-list-box{
+	position: relative;
+	opacity: 0;
+}
+
+
+.addon-list-box .addon-item{
+	position: relative;
+}
+
+.addon-list-box .addon-item .link3-custom-checkbox label span.checkbox-icon{
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+}
+
+.addon-list-box .addon-item .link3-custom-checkbox label {
+    padding-left: 35px;
+	font-size: 16px;
+	line-height: 25px;
+	margin-bottom: 0;
+}
+
+.package-customizer-card.show .addon-list-box{
+	opacity: 1;
+    transition: all 0.3s;
+    transition-delay: 0.3s;
+}
+
+
+/*****************************************
+	Reconnection Styles
+******************************************/
+
+.reconnection-text-content{
+	position: relative;
+	text-align: center;
+	padding: 30px 150px;
+}
+
+.reconnection-text-content h3{
+	font-size: 40px;
+	line-height: 55px;
+	font-weight: 700;
+	color: #FD5602;
+
+}
+
+/*****************************************
+	Featured Offer Section Styles
+******************************************/
+.featured-offer-secton{
+	position: relative;
+}
+
+.featured-offer-container {
+	min-height: 350px;
+	position: relative;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: 30px;
+	margin-top: 60px;
+}
+
+.featured-offer-container .bg-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-position: top left;
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: 1;
+	border-radius: 30px;
+}
+
+.featured-offer-container .bg-image::before{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	content: '';
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.featured-offer-container .offer-content {
+	text-align: center;
+	z-index: 2;
+	color: #fff;
+}
+
+
+.featured-offer-container .offer-content p.sub-text{
+	font-size: 20px;
+	line-height: 26px;
+	margin-bottom: 0;
+}
+
+.featured-offer-container .offer-content p.sub-title{
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 30px;
+	margin-bottom: 0;
+}
+
+.featured-offer-container .offer-content .title{
+	margin: 15px 0;
+}
+
+.featured-offer-container .offer-content .title h2{
+	font-size: 54px;
+	font-weight: 900;
+	line-height: 60px;
+	color: #F2F3F4;
+}
+
+.featured-offer-container .offer-content .title h2 span{
+	color: #FD5602;
+}
+
+/*****************************************
+	Bandwidth TEster Section Styles
+******************************************/
+
+.bandwidth-tester-section{
+	position: relative;
+	padding: 120px 0 60px;
+}
+
+.bandwidth-tester-section .bandwidth-tester-content-box{
+	text-align: center;
+}
+
+.bandwidth-tester-section .bandwidth-tester-content-box .speed-meter-image{
+	text-align: center;
+	margin-top: 40px;
+	margin-bottom: 40px;	
+}
+
+.bandwidth-tester-section .bandwidth-tester-content-box .btn-box{
+}
+
+
+.bandwidth-tester-section .bandwidth-tester-content-box .note-text{
+	margin-top: 35px;
+	font-size: 20px;
+    line-height: 26px;
+	font-weight: 700;
+}
+
+/*****************************************
+	Sales Promotion CTA Section Styles
+******************************************/
+.sales-promotion-cta-section{
+	position: relative;
+}
+
+.sales-promotion-cta-section .banner-image{
+	position: relative;
+}
+
+.sales-promotion-cta-section .banner-image::before{
+	position: absolute;
+	left: 0;
+	top: 0;
+	content: '';
+	width: 100%;
+	height: 30%;
+	background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.0) 100%)
+
+}
+
+.sales-promotion-cta-section .text-content{
+	position: absolute;
+	left: 0px;
+	right: 0;
+	top: 25px;
+	width: 100%;
+	text-align: center;
+}
+
+.sales-promotion-cta-section .text-content .title{}
+
+.sales-promotion-cta-section .text-content .title h2{
+	font-size: 50px;
+	line-height: 66px;
+	font-weight: 700;
+	color: #fff;
+	margin: 0;
+}
+
+
+/*****************************************
+	Contact Us Section Styles
+******************************************/
+.contact-us-section{
+	position: relative;
+	padding: 80px 0;
+}
+
+.contact-us-section .contact-us-section-inner{
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+	padding: 0 80px;
+}
+
+.contact-us-section .contact-us-section-inner .inner-column{
+	width: 50%;
+	padding: 60px;
+
+}
+
+.contact-us-section .section-title{
+	margin-bottom: 30px;
+}
+
+.contact-us-section .support-bg-image{
+	position: relative;
+	overflow: hidden;
+	border-radius: 30px;
+	text-align: center;
+	padding: 30px;
+}
+
+.contact-us-section .support-bg-image img{
+	border-radius: 30px;
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+	/* width: 400px; */
+	margin: 0 auto;
+}
+
+.new-connection-form {
+	/* padding: 60px; */
+	padding-top: 40px;
+}
+
+.new-connection-form p.from-text{
+	font-size: 18px;
+}

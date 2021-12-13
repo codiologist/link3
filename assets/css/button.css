@@ -1,0 +1,85 @@
+.btn {
+	display: inline-flex;
+	font-weight: 500;
+	padding: 8px 30px;
+	font-size: 16px;
+	font-weight: 500;
+	color: #2E2C2C;
+}
+
+.btn .btn-text {}
+
+.btn.theme-btn {
+	background-color: #FD5602;
+	color: #fff;
+}
+
+.btn.btn-outline {
+	background-color: #fff;
+	border: 2px solid #FD5602;
+	transition: all 0.3s;
+}
+
+.btn.btn-outline:hover {
+	background-color: #FD5602;
+	border: 2px solid #FD5602;
+	color: #fff;
+}
+
+.btn-round {
+	border-radius: 50px;
+}
+
+
+.btn.has-icon {
+	padding: 8px 25px;
+}
+
+.btn.has-icon .icon {}
+
+.btn.has-icon .icon i {}
+
+.btn.has-icon .icon.icon-before {}
+
+.btn.has-icon .icon.icon-after {
+	margin-left: 10px;
+}
+
+
+.btn.has-icon:hover .icon {
+	-webkit-animation: GoSlideAndFadeArrow .5s forwards;
+	-ms-animation: GoSlideAndFadeArrow .5s forwards;
+	-moz-animation: GoSlideAndFadeArrow .5s forwards;
+	-o-animation: GoSlideAndFadeArrow .5s forwards;
+	animation-timing-function: cubic-bezier(1, 0.01, 0.3, 1)
+}
+
+
+@keyframes GoSlideAndFadeArrow {
+	0% {
+		opacity: 1;
+		transform: translate(0, 0) rotate(-0deg)
+	}
+
+	75% {
+		opacity: 0;
+		transform: translate(10px, 0) rotate(-0deg)
+	}
+
+	76% {
+		opacity: 0;
+		transform: translate(-10px, 0) rotate(-0deg)
+	}
+
+	100% {
+		opacity: 1;
+		transform: translate(0, 0) rotate(-0deg)
+	}
+}
+
+
+
+
+
+
+
