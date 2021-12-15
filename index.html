@@ -17,9 +17,13 @@
 	<!-- Place favicon.ico in the root directory -->
 
 	<!-- Fonts & Icon Font CSS -->
+
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wdth,wght@62.5,500;62.5,600;62.5,700;62.5,800;62.5,900&family=Roboto:wght@300;400;500;700;900&display=swap"
+		rel="stylesheet">
+
 	<link rel="stylesheet" href="assets/fonts/fontawesome/css/all.min.css">
 	<link rel="stylesheet" href="assets/fonts/material-icons/material-icon.css">
 	<link rel="stylesheet" href="assets/fonts/flat-icons/flaticon.css">
@@ -49,13 +53,18 @@
 
 <body>
 	<!-- Start Preloader -->
-	<div class="preloader">
-		<div class="radious-line"></div>
-		<div class="radious-line"></div>
-		<div class="radious-line"></div>
-		<div class="radious-line"></div>
-		<div class="preloader-logo">
-			<img class="img-fluid" src="assets/img/logo-light.png">
+	<div class=" preloader">
+		<div class="preloader-inner">
+			<div class="spinner">
+				<i></i>
+				<i></i>
+				<i></i>
+				<i></i>
+				<i></i>
+				<i></i>
+				<i></i>
+				<i></i>
+			</div>
 		</div>
 	</div>
 	<!-- / End Preloader -->
@@ -141,6 +150,17 @@
 						</a>
 					</div>
 
+					<div class="header-links">
+						<ul>
+							<li class="current">
+								<a href="index.html">Personal</a>
+							</li>
+							<li>
+								<a href="index.html">Business</a>
+							</li>
+						</ul>
+					</div>
+
 					<ul class="navigation clearfix">
 						<!--Keep This Empty / Menu will come through Javascript-->
 					</ul>
@@ -158,36 +178,32 @@
 				<div class="home-slider">
 					<div class="slide-item">
 						<div class="banner-image">
-							<img class="img-fluid desktop-banner" src="assets/img/slides/banner-desktop.jpg" alt="Slider Banner Image">
+							<img class="img-fluid desktop-banner" src="assets/img/slides/banner-desktop-1.jpg" alt="Slider Banner Image">
 							<img class="img-fluid mobile-banner" src="assets/img/slides/banner-mobile-1.jpg" alt="Slider Banner Image">
 						</div>
 					</div>
+
 					<div class="slide-item">
 						<div class="banner-image">
-							<img class="img-fluid desktop-banner" src="assets/img/slides/banner-desktop.jpg" alt="Slider Banner Image">
+							<img class="img-fluid desktop-banner" src="assets/img/slides/banner-desktop-2.jpg" alt="Slider Banner Image">
 							<img class="img-fluid mobile-banner" src="assets/img/slides/banner-mobile-2.jpg" alt="Slider Banner Image">
 						</div>
 					</div>
 					<div class="slide-item">
 						<div class="banner-image">
-							<img class="img-fluid desktop-banner" src="assets/img/slides/banner-desktop.jpg" alt="Slider Banner Image">
+							<img class="img-fluid desktop-banner" src="assets/img/slides/banner-desktop-3.jpg" alt="Slider Banner Image">
 							<img class="img-fluid mobile-banner" src="assets/img/slides/banner-mobile-3.jpg" alt="Slider Banner Image">
-						</div>
-					</div>
-					<div class="slide-item">
-						<div class="banner-image">
-							<img class="img-fluid desktop-banner" src="assets/img/slides/banner-desktop.jpg" alt="Slider Banner Image">
-							<img class="img-fluid mobile-banner" src="assets/img/slides/banner-mobile-4.jpg" alt="Slider Banner Image">
 						</div>
 					</div>
 				</div>
 			</section>
 			<!-- / End Home Slider Section -->
 
+
 			<!-- Start Package Customizer Section -->
 			<section class="package-customizer-section">
 				<div class="section-title">
-					<h2 class="title">What are You Lootking For ?</h2>
+					<h2 class="title">What are You Looking For ?</h2>
 				</div>
 				<div class="package-customizer-container">
 					<div class="package-customizer-inner">
@@ -199,8 +215,8 @@
 											<div class="nav nav-tabs" id="nav-tab" role="tablist">
 												<a class="nav-link active" id="nav-pacakges-filter-tab" data-toggle="tab" href="#nav-pacakges-filter" role="tab"
 													aria-controls="nav-pacakges-filter" aria-selected="true">Pacakges</a>
-												<a class="nav-link" id="nav-reconnection-pacakges-tab" data-toggle="tab" href="#nav-reconnection-pacakges" role="tab" aria-controls="nav-reconnection-pacakges"
-													aria-selected="false">Reconnection</a>
+												<a class="nav-link" id="nav-reconnection-pacakges-tab" data-toggle="tab" href="#nav-reconnection-pacakges" role="tab"
+													aria-controls="nav-reconnection-pacakges" aria-selected="false">Reconnection</a>
 											</div>
 										</nav>
 										<div class="tab-content" id="nav-tabContent">
@@ -321,11 +337,11 @@
 																		<h3>Special Need</h3>
 																		<p class="sub-text">Please Choose</p>
 																	</div>
-					
+
 																	<div class="addon-list-box">
 																		<div class="addon-item">
 																			<div class="link3-custom-checkbox ">
-																				<input type="checkbox" name="test" value="" class="form-control" id="chekcbox1"/>
+																				<input type="checkbox" name="test" value="" class="form-control" id="chekcbox1" />
 																				<label for="chekcbox1">
 																					<span class="checkbox-icon"></span>
 																					Portable Game
@@ -334,7 +350,7 @@
 																		</div>
 																		<div class="addon-item">
 																			<div class="link3-custom-checkbox ">
-																				<input type="checkbox" name="test1" value="Full Time" class="form-control" id="chekcbox2"/>
+																				<input type="checkbox" name="test1" value="Full Time" class="form-control" id="chekcbox2" />
 																				<label for="chekcbox2">
 																					<span class="checkbox-icon"></span>
 																					Videos and Movies
@@ -343,7 +359,7 @@
 																		</div>
 																		<div class="addon-item">
 																			<div class="link3-custom-checkbox ">
-																				<input type="checkbox" name="test3" value="Full Time" class="form-control" id="chekcbox3"/>
+																				<input type="checkbox" name="test3" value="Full Time" class="form-control" id="chekcbox3" />
 																				<label for="chekcbox3">
 																					<span class="checkbox-icon"></span>
 																					Cyber Security
@@ -351,14 +367,15 @@
 																			</div>
 																		</div>
 																	</div>
-					
+
 																</div>
 															</div>
 														</div>
 													</div>
 												</div>
 												<div class="customizer-btn-box">
-													<button type="text" class="btn btn-outline btn-round">View Result</button>
+													<!-- <button type="text" class="btn btn-outline btn-round">View Result</button> -->
+													<a href="matched-package.html" class="btn btn-outline btn-round">View Result</a>
 												</div>
 											</div>
 											<div class="tab-pane fade" id="nav-reconnection-pacakges" role="tabpanel" aria-labelledby="nav-reconnection-pacakges-tab">
@@ -415,8 +432,9 @@
 			</section>
 			<!-- / End Featured Offer Section -->
 
+
 			<!-- Start Bandwidth Tester Section -->
-			<section class="bandwidth-tester-section" >
+			<section class="bandwidth-tester-section">
 				<div class="section-title">
 					<h2 class="title">What is my <span> Bandwidth?</span></h2>
 				</div>
@@ -430,7 +448,7 @@
 								<div class="btn-box">
 									<a href="#" target="_blank" class="btn theme-btn btn-round has-icon">
 										<span class="btn-text">Test Now</span>
-										<div class="icon icon-after">
+										<div class="icon icon-after slide-ltr">
 											<img src="assets/img/icons/icon-white-chevron-right.svg" alt="">
 										</div>
 									</a>
@@ -443,19 +461,15 @@
 			</section>
 			<!-- / End Bandwidth Tester Section -->
 
+
 			<!-- Start Sales Promotion Section -->
 			<section class="sales-promotion-cta-section">
 				<div class="banner-image">
-					<img class="img-fluid" src="assets/img/banners/product-banner.jpg" alt="Product Banner">
-				</div>
-				<div class="text-content">
-					<div class="title">
-						<h2>Buy Routers at Best Price</h2>
-					</div>
+					<img class="img-fluid hide-on-mobile" src="assets/img/banners/product-banner-desktop.jpg" alt="Product Banner">
+					<img class="img-fluid show-on-mobile" src="assets/img/banners/product-banner-mobile.jpg" alt="Product Banner">
 				</div>
 			</section>
 			<!-- / End Sales Promotion Section -->
-
 
 
 			<!-- Start Contact Us Section -->
@@ -474,7 +488,7 @@
 										<input type="text" class="form-control" placeholder="Your Name">
 										<span class="icon">
 											<i class="material-icons-outlined">person_outline</i>
-										<span>
+											<span>
 									</div>
 								</div>
 								<div class="form-group">
@@ -483,7 +497,7 @@
 										<input type="text" class="form-control" placeholder="01XXXXXXXXX">
 										<span class="icon">
 											<i class="material-icons-outlined">phone</i>
-										<span>
+											<span>
 									</div>
 								</div>
 								<div class="form-group">
@@ -492,7 +506,7 @@
 										<input type="text" class="form-control" placeholder="name@email.com">
 										<span class="icon">
 											<i class="material-icons-outlined">alternate_email</i>
-										<span>
+											<span>
 									</div>
 								</div>
 								<div class="form-group mb-0">
@@ -699,7 +713,7 @@
 							</div>
 
 							<div class="copyright-text">
-								<p>Copyright &copy; 2021 All rights reserved.</p>
+								<p>Copyright &copy; All rights reserved.</p>
 							</div>
 							<div class="developedby">
 								<p>Design &amp; Developed by
@@ -731,7 +745,7 @@
 	<script src="assets/js/wow.js"></script>
 	<script src="assets/plugins/slick/slick.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"></script>
-	<script src="assets/js/index.js"></script>
+	<script src="assets/js/package-customizer.js"></script>
 	<script src="assets/js/main.js"></script>
 
 	<script>

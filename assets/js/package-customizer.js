@@ -84,7 +84,7 @@
 			snap: false,
 			connect: true,
 			behaviour: "tap-drag",
-			step: 10,
+			step: 10.1,
 			range: {
 				min: 10,
 				max: 100,
@@ -105,12 +105,10 @@
 			},
 		});
 
-		netBandwidthSlider.noUiSlider.on("update", function () {
-			let slider_values2 = netBandwidthSlider.noUiSlider.get();
-			for (let i = 0; i < netBandwidthValues.length; i++) {
-				netBandwidthValues[i][0].innerHTML = parseInt(slider_values2);
-				netBandwidthValues[i][1].innerHTML = parseInt(slider_values2);
-			}
+		netBandwidthSlider.noUiSlider.on("update", function (values, handle) {
+
+			netBandwidthValues[0][0].innerHTML = values[handle];
+			netBandwidthValues[0][1].innerHTML = values[handle];
 		});
 	}
 
@@ -128,7 +126,7 @@
 			snap: false,
 			connect: true,
 			behaviour: "tap-drag",
-			step: 10,
+			step: 10.1,
 			range: {
 				min: 10,
 				max: 100,
@@ -149,16 +147,9 @@
 			},
 		});
 
-		// console.log(cacheBandwidthValues);
-
-		cacheBandwidthSlider.noUiSlider.on("update", function () {
-			let slider_values3 = cacheBandwidthSlider.noUiSlider.get();
-			for (let i = 0; i < cacheBandwidthValues.length; i++) {
-				cacheBandwidthValues[i].innerHTML = parseInt(slider_values3);
-				cacheBandwidthValues[i].innerHTML = parseInt(slider_values3);
-			}
-
-			console.log(cacheBandwidthValues);
+		cacheBandwidthSlider.noUiSlider.on('update', function (values, handle) {
+			cacheBandwidthValues[0][0].innerHTML = values[handle];
+			cacheBandwidthValues[0][1].innerHTML = values[handle];
 		});
 	}
 })(window.jQuery);

@@ -46,16 +46,23 @@
 }
 
 
-.btn.has-icon:hover .icon {
-	-webkit-animation: GoSlideAndFadeArrow .5s forwards;
-	-ms-animation: GoSlideAndFadeArrow .5s forwards;
-	-moz-animation: GoSlideAndFadeArrow .5s forwards;
-	-o-animation: GoSlideAndFadeArrow .5s forwards;
+.btn.has-icon:hover .icon.slide-ltr {
+	-webkit-animation: BtnIconSlide-LRT .5s forwards;
+	-ms-animation: BtnIconSlide-LRT .5s forwards;
+	-moz-animation: BtnIconSlide-LRT .5s forwards;
+	-o-animation: BtnIconSlide-LRT .5s forwards;
+	animation-timing-function: cubic-bezier(1, 0.01, 0.3, 1)
+}
+.btn.has-icon:hover .icon.slide-t2b {
+	-webkit-animation: BtnIconSliBde-T2B .5s forwards;
+	-ms-animation: BtnIconSlide-T2B .5s forwards;
+	-moz-animation: BtnIconSlide-T2B .5s forwards;
+	-o-animation: BtnIconSlide-T2B .5s forwards;
 	animation-timing-function: cubic-bezier(1, 0.01, 0.3, 1)
 }
 
 
-@keyframes GoSlideAndFadeArrow {
+@keyframes BtnIconSlide-LRT {
 	0% {
 		opacity: 1;
 		transform: translate(0, 0) rotate(-0deg)
@@ -77,7 +84,27 @@
 	}
 }
 
+@keyframes BtnIconSlide-T2B {
+	0% {
+		opacity: 1;
+		transform: translate(0, 0) rotate(-0deg)
+	}
 
+	75% {
+		opacity: 0;
+		transform: translate(10px, 0) rotate(-0deg)
+	}
+
+	76% {
+		opacity: 0;
+		transform: translate(-10px, 0) rotate(-0deg)
+	}
+
+	100% {
+		opacity: 1;
+		transform: translate(0, 0) rotate(-0deg)
+	}
+}
 
 
 
