@@ -4,25 +4,26 @@
 	padding: 8px 30px;
 	font-size: 16px;
 	font-weight: 500;
-	color: #2E2C2C;
+	color: #2e2c2c;
 }
 
-.btn .btn-text {}
+.btn .btn-text {
+}
 
 .btn.theme-btn {
-	background-color: #FD5602;
+	background-color: #fd5602;
 	color: #fff;
 }
 
 .btn.btn-outline {
 	background-color: #fff;
-	border: 2px solid #FD5602;
+	border: 2px solid #fd5602;
 	transition: all 0.3s;
 }
 
 .btn.btn-outline:hover {
-	background-color: #FD5602;
-	border: 2px solid #FD5602;
+	background-color: #fd5602;
+	border: 2px solid #fd5602;
 	color: #fff;
 }
 
@@ -30,83 +31,56 @@
 	border-radius: 50px;
 }
 
-
 .btn.has-icon {
 	padding: 8px 25px;
 }
 
-.btn.has-icon .icon {}
+.btn.has-icon .icon {
+}
 
-.btn.has-icon .icon i {}
+.btn.has-icon .icon i {
+}
 
-.btn.has-icon .icon.icon-before {}
+.btn.has-icon .icon.icon-before {
+}
 
 .btn.has-icon .icon.icon-after {
 	margin-left: 10px;
 }
 
-
 .btn.has-icon:hover .icon.slide-ltr {
-	-webkit-animation: BtnIconSlide-LRT .5s forwards;
-	-ms-animation: BtnIconSlide-LRT .5s forwards;
-	-moz-animation: BtnIconSlide-LRT .5s forwards;
-	-o-animation: BtnIconSlide-LRT .5s forwards;
-	animation-timing-function: cubic-bezier(1, 0.01, 0.3, 1)
+	-webkit-animation: BtnIconSlide-LRT 0.5s forwards;
+	-ms-animation: BtnIconSlide-LRT 0.5s forwards;
+	-moz-animation: BtnIconSlide-LRT 0.5s forwards;
+	-o-animation: BtnIconSlide-LRT 0.5s forwards;
+	animation-timing-function: cubic-bezier(1, 0.01, 0.3, 1);
 }
 .btn.has-icon:hover .icon.slide-t2b {
-	-webkit-animation: BtnIconSliBde-T2B .5s forwards;
-	-ms-animation: BtnIconSlide-T2B .5s forwards;
-	-moz-animation: BtnIconSlide-T2B .5s forwards;
-	-o-animation: BtnIconSlide-T2B .5s forwards;
-	animation-timing-function: cubic-bezier(1, 0.01, 0.3, 1)
+	-webkit-animation: BtnIconSliBde-T2B 0.5s forwards;
+	-ms-animation: BtnIconSlide-T2B 0.5s forwards;
+	-moz-animation: BtnIconSlide-T2B 0.5s forwards;
+	-o-animation: BtnIconSlide-T2B 0.5s forwards;
+	animation-timing-function: cubic-bezier(1, 0.01, 0.3, 1);
 }
 
-
-@keyframes BtnIconSlide-LRT {
-	0% {
-		opacity: 1;
-		transform: translate(0, 0) rotate(-0deg)
-	}
-
-	75% {
-		opacity: 0;
-		transform: translate(10px, 0) rotate(-0deg)
-	}
-
-	76% {
-		opacity: 0;
-		transform: translate(-10px, 0) rotate(-0deg)
-	}
-
-	100% {
-		opacity: 1;
-		transform: translate(0, 0) rotate(-0deg)
-	}
+.btn.has-collapse-content::before {
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	content: "";
+	width: 0;
+	height: 0;
+	width: 18px;
+	height: 18px;
+	transition: all 0.3s;
+	background-image: url(../img/icons/icon-chevron-down-grey.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	transform: rotate(-180deg);
 }
 
-@keyframes BtnIconSlide-T2B {
-	0% {
-		opacity: 1;
-		transform: translate(0, 0) rotate(-0deg)
-	}
-
-	75% {
-		opacity: 0;
-		transform: translate(10px, 0) rotate(-0deg)
-	}
-
-	76% {
-		opacity: 0;
-		transform: translate(-10px, 0) rotate(-0deg)
-	}
-
-	100% {
-		opacity: 1;
-		transform: translate(0, 0) rotate(-0deg)
-	}
+.btn.has-collapse-content.collapsed::before {
+	transform: rotate(0deg);
+	animation-timing-function: cubic-bezier(1, 0.01, 0.3, 1);
 }
-
-
-
-
-

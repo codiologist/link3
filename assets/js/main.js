@@ -8,8 +8,6 @@
 		}
 	}
 
-
-
 	//Update Header Style and Scroll to Top
 	function headerStyle() {
 		if ($(".main-header").length) {
@@ -30,19 +28,13 @@
 
 	//Submenu Dropdown Toggle
 	if ($(".main-header li.dropdown ul").length) {
-		$(".main-header .navigation li.dropdown").append(
-			'<div class="dropdown-btn"><span class="fa fa-angle-down"></span></div>'
-		);
+		$(".main-header .navigation li.dropdown").append('<div class="dropdown-btn"><span class="fa fa-angle-down"></span></div>');
 	}
 
 	//Mobile Nav Hide Show
 	if ($(".mobile-menu").length) {
-		var mobileMenuContent = $(
-			".main-header .nav-outer .main-menu .navigation"
-		).html();
-		$(".mobile-menu").append(
-			'<div class="close-btn"><span class="icon flaticon-cancel-music"></span></div>'
-		);
+		var mobileMenuContent = $(".main-header .nav-outer .main-menu .navigation").html();
+		$(".mobile-menu").append('<div class="close-btn"><span class="icon flaticon-cancel-music"></span></div>');
 		$(".mobile-menu .navigation").append(mobileMenuContent);
 		$(".sticky-header .navigation").append(mobileMenuContent);
 		$(".mobile-menu .close-btn").on("click", function () {
@@ -58,12 +50,9 @@
 		});
 
 		//Menu Toggle Btn
-		$(".mobile-menu .menu-backdrop,.mobile-menu .close-btn").on(
-			"click",
-			function () {
-				$("body").removeClass("mobile-menu-visible");
-			}
-		);
+		$(".mobile-menu .menu-backdrop,.mobile-menu .close-btn").on("click", function () {
+			$("body").removeClass("mobile-menu-visible");
+		});
 	}
 
 	// Elements Animation
@@ -82,7 +71,8 @@
 		$(".scroll-to-target").on("click", function () {
 			var target = $(this).attr("data-target");
 			// animate
-			$("html, body").animate({
+			$("html, body").animate(
+				{
 					scrollTop: $(target).offset().top,
 				},
 				1500
@@ -101,10 +91,7 @@
 
 	$(".download-selfcare-app-box").each(function () {
 		var $this = $(this);
-		$this
-			.clone()
-			.attr("class", "download-selfcare-app-box")
-			.appendTo(".selfcare-app-box-mobile");
+		$this.clone().attr("class", "download-selfcare-app-box").appendTo(".selfcare-app-box-mobile");
 	});
 
 	$(".site-quick-links").each(function () {
@@ -124,9 +111,16 @@
 
 	$(".footer-right-container .footer-social-links").each(function () {
 		var $this = $(this);
-		$this
-			.clone()
-			.attr("class", "social-links")
-			.appendTo(".mobile-social-link-box");
+		$this.clone().attr("class", "social-links").appendTo(".mobile-social-link-box");
+	});
+
+	$(".show-details-btn-box a.btn").on("click", function () {
+		var self = $(this);
+
+		if (self.hasClass("collapsed")) {
+			self.html("Hide Offer");
+		} else {
+			self.html("Show Offer");
+		}
 	});
 })(window.jQuery);
