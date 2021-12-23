@@ -866,6 +866,22 @@ Device Optimize Media Queries
 		margin-top: 13px;
 	}
 
+	/*****************************************
+		Page Breadcurmb Styles
+	******************************************/
+
+	.page-breadcurmb {
+		min-height: 400px;
+	}
+
+	.page-breadcurmb .title {
+		left: 13%;
+	}
+
+	/*****************************************
+		Owl Carousel Styles
+	******************************************/
+
 	.owl-carousel .owl-nav button span {
 		width: 40px;
 		height: 40px;
@@ -881,6 +897,14 @@ Device Optimize Media Queries
 	******************************************/
 	.package-card {
 		width: 357px;
+	}
+
+	/*****************************************
+		BG Content Box Styles
+	******************************************/
+
+	.bg-content-box {
+		min-height: 380px;
 	}
 
 	/*========================================================================================
@@ -1026,6 +1050,25 @@ Device Optimize Media Queries
 	.selfcare-content-section .text-box .app-btn-box img {
 		width: 300px;
 	}
+
+	/*========================================================================================
+		About Us Page Styles
+	========================================================================================*/
+	.about-us-page .about-us-text-content .text-box {
+		padding: 0 80px;
+	}
+	.mission-vision-section {
+		padding: 0 350px 60px;
+	}
+
+	.career-section .job-listing-container .view-all-jobs-btn-box {
+		bottom: 7px;
+	}
+
+	.career-section .job-listing-container .view-all-jobs-btn-box .btn {
+		font-size: 16px;
+		padding: 7px 25px;
+	}
 }
 
 @media only screen and (max-width: 1139px) {
@@ -1112,8 +1155,13 @@ Device Optimize Media Queries
 		position: fixed !important;
 	}
 
-	.main-header.fixed-header .nav-outer .mobile-nav-toggler {
+	.main-header.fixed-header .nav-outer .mobile-nav-toggler,
+	.main-header.has-page-breadcurmb.fixed-header .nav-outer .mobile-nav-toggler {
 		color: #2e2c2c;
+	}
+
+	.main-header.has-page-breadcurmb .nav-outer .mobile-nav-toggler {
+		color: #ffffff;
 	}
 
 	.main-header .main-box .main-header-inner {
@@ -1132,12 +1180,14 @@ Device Optimize Media Queries
 		display: block;
 	}
 
-	.main-header.has-top-banner .main-box .logo-box .logo img.logo-light {
-		display: none;
+	.main-header.has-page-breadcurmb.fixed-header .main-box .logo-box .logo img.logo-dark,
+	.main-header.has-page-breadcurmb .main-box .logo-box .logo img.logo-light {
+		display: block;
 	}
 
-	.main-header.has-top-banner .main-box .logo-box .logo img.logo-dark {
-		display: block;
+	.main-header.has-page-breadcurmb.fixed-header .main-box .logo-box .logo img.logo-light,
+	.main-header.has-page-breadcurmb .main-box .logo-box .logo img.logo-dark {
+		display: none;
 	}
 
 	/*****************************************
@@ -1174,6 +1224,20 @@ Device Optimize Media Queries
 		letter-spacing: -0.5px;
 	}
 
+	/******* Page Breadcurmb Styles *******/
+	.page-breadcurmb {
+		min-height: 400px;
+	}
+
+	.page-breadcurmb .title {
+		position: absolute;
+		top: auto;
+		bottom: 0px;
+		left: 20px;
+		transform: translate(0%, 0%);
+		text-align: left;
+	}
+
 	/******* Package Card Styles *******/
 	.package-card {
 		width: 100%;
@@ -1182,6 +1246,47 @@ Device Optimize Media Queries
 	.package-card .top-content .top-content-inner {
 		margin-left: -15px;
 		margin-right: -15px;
+	}
+
+	/******* BG Content Box Styles *******/
+
+	.bg-content-box {
+		min-height: 280px;
+	}
+
+	.bg-content-box .bg-image {
+		border-radius: 10px;
+	}
+
+	.bg-content-box .text-content .title {
+		margin-bottom: 10px;
+	}
+
+	.bg-content-box .text-content .title h2 {
+		font-size: 45px;
+		line-height: 55px;
+	}
+
+	.bg-content-box .text-content .title h2 span {
+		color: #fd5602;
+	}
+
+	.bg-content-box .text-content p.sub-text {
+		font-size: 18px;
+		line-height: 26px;
+		padding: 0 15px;
+	}
+
+	/******* Text Content Card Styles *******/
+
+	.text-content-card {
+		padding: 25px;
+		padding-bottom: 10px;
+	}
+
+	.text-content-card .title h2 {
+		font-size: 30px;
+		line-height: 40px;
 	}
 
 	/*========================================================================================
@@ -1451,7 +1556,7 @@ Device Optimize Media Queries
 	========================================================================================*/
 
 	.matched-package-page .page-container {
-		padding-top: 80px;
+		padding-top: 70px;
 	}
 
 	.matched-package-section .section-title {
@@ -1673,6 +1778,66 @@ Device Optimize Media Queries
 
 	.selfcare-content-section .text-box .app-btn-box img {
 		width: 180px;
+	}
+
+	/*=============================================================
+		About Us Page Styles
+	=============================================================*/
+	.about-us-page .footer {
+		margin-top: 0;
+		padding-top: 30px;
+	}
+
+	.about-us-page .about-us-text-content {
+		padding-top: 40px;
+	}
+
+	.about-us-page .about-us-text-content .title {
+		margin-bottom: 20px;
+	}
+
+	.about-us-page .about-us-text-content .title h2 {
+		font-size: 30px;
+		line-height: 30px;
+	}
+
+	.about-us-page .about-us-text-content .text-box {
+		padding: 0 10px;
+		text-align: left;
+	}
+
+	.about-us-page .about-us-text-content .text-box p {
+		font-size: 15px;
+		line-height: 25px;
+	}
+
+	.mission-vision-section {
+		padding: 0;
+	}
+
+	.mission-vision-section .bg-content-box {
+		margin-top: 20px;
+	}
+
+	.about-us-page .career-section {
+		padding-top: 15px;
+	}
+
+	.career-section .job-listing-container {
+		margin-right: -15px;
+	}
+
+	.career-section .job-listing-container .job-listing-carousel .job-short-details-card {
+		padding: 15px;
+	}
+
+	.career-section .job-listing-container .job-listing-carousel.owl-carousel .owl-nav {
+		text-align: left;
+	}
+
+	.career-section .job-listing-container .view-all-jobs-btn-box {
+		bottom: 7px;
+		right: 10px;
 	}
 }
 

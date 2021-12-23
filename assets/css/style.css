@@ -949,35 +949,103 @@ img {
 }
 
 /*****************************************
-	Page Breadcrumb Styles
+	Page Header Gap Styles
 ******************************************/
-.main-header.has-breadcurmb {
+.main-header.has-header-gap {
 	position: relative;
 	background-color: #fff;
 }
 
-.main-header.has-breadcurmb.fixed-header {
+.main-header.has-header-gap.fixed-header {
 	position: fixed;
 }
 
-.main-header.has-breadcurmb .main-box {
+.main-header.has-header-gap .main-box {
 	padding: 10px 0px 3px;
 }
 
-.main-header.has-breadcurmb .main-menu .navigation > li > a {
+.main-header.has-header-gap .main-menu .navigation > li > a {
 	color: #fd5602;
 }
 
-.main-header.has-breadcurmb.fixed-header .main-menu .navigation > li > a {
+.main-header.has-header-gap.fixed-header .main-menu .navigation > li > a {
 	color: #072f5f;
 }
 
-.main-header.has-breadcurmb .main-box .logo-box .logo img.logo-light {
+.main-header.has-header-gap .main-box .logo-box .logo img.logo-light {
 	display: none;
 }
 
-.main-header.has-breadcurmb .main-box .logo-box .logo img.logo-dark {
+.main-header.has-header-gap .main-box .logo-box .logo img.logo-dark {
 	display: block;
+}
+
+/*****************************************
+	Page Breadcurmb Styles
+******************************************/
+
+.page-breadcurmb {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	min-height: 300px;
+}
+
+.page-breadcurmb .breadcurmb-bg-image {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	z-index: 1;
+}
+
+.page-breadcurmb .breadcurmb-bg-image::before {
+	position: absolute;
+	left: 0;
+	top: 0;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 1;
+}
+
+.page-breadcurmb .title {
+	position: absolute;
+	top: 60%;
+	left: 11%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	text-align: center;
+}
+
+.page-breadcurmb .title h2 {
+	font-family: "Noto Sans Display", sans-serif;
+	font-size: 60px;
+	font-weight: 700;
+	line-height: 65px;
+	margin: 0;
+	color: #fff;
+}
+
+.page-breadcurmb .title h3 {
+	font-size: 35px;
+	font-weight: 700;
+	line-height: 40px;
+	margin: 0;
+	margin-bottom: 15px;
+	color: #fff;
+}
+
+.page-breadcurmb .title p {
+	font-size: 26px;
+	font-weight: 700;
+	line-height: 26px;
+	margin: 0;
+	margin-top: 15px;
+	color: #fff;
 }
 
 /*****************************************
@@ -1333,6 +1401,39 @@ img {
 	background: linear-gradient(263.87deg, #0560dc -18.9%, #5393ea 85.77%);
 }
 
+.clients-container .owl-carousel .owl-nav {
+	margin-top: 20px;
+	margin-left: 5px;
+	text-align: center;
+}
+
+.owl-carousel .owl-nav button.owl-prev span,
+.owl-carousel .owl-nav button.owl-next span {
+	position: relative;
+	background: #fff;
+	border: 1px solid #fd5602;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.owl-carousel .owl-nav button.owl-prev span img,
+.owl-carousel .owl-nav button.owl-next span img {
+	width: 12px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.owl-carousel .owl-nav button.owl-prev:hover span,
+.owl-carousel .owl-nav button.owl-next:hover span {
+	background: #fff;
+	border: 1px solid #fd5602;
+}
+
 /*****************************************
 	Slick Slider Styles
 ******************************************/
@@ -1412,6 +1513,40 @@ img {
 	font-weight: 500;
 	color: #676767;
 	margin-top: 15px;
+}
+
+/*****************************************
+	Title With Side Line Styles
+******************************************/
+.title-with-line {
+	position: relative;
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+	margin-bottom: 10px;
+}
+
+.title-with-line .title {
+	width: auto;
+}
+
+.title-with-line .title h2 {
+	font-family: "Noto Sans Display", sans-serif;
+	font-weight: 700;
+	color: #2e2c2c;
+}
+
+.title-with-line .title h2 span {
+	color: #fd5602;
+}
+
+.title-with-line .line {
+	position: absolute;
+	right: 5px;
+	top: 55%;
+	width: 100%;
+	height: 2px;
+	background-color: #676767;
 }
 
 /*****************************************
@@ -1676,6 +1811,172 @@ ul.icon-list-box li .text a:hover {
 	background-color: #fd5602;
 	color: #fff;
 	border-radius: 50px;
+}
+
+/*****************************************
+	BG Content Box Styles
+******************************************/
+
+.bg-content-box {
+	min-height: 320px;
+	position: relative;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: 30px;
+	margin-top: 60px;
+}
+
+.bg-content-box .bg-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-position: top left;
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: 1;
+	border-radius: 30px;
+}
+
+.bg-content-box .bg-image::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.bg-content-box .text-content {
+	text-align: center;
+	z-index: 2;
+	color: #fff;
+}
+
+.bg-content-box .text-content .title {
+	margin-bottom: 15px;
+}
+
+.bg-content-box .text-content .title h2 {
+	font-family: "Noto Sans Display", sans-serif;
+	font-size: 50px;
+	line-height: 60px;
+	font-weight: 700;
+	color: #f2f3f4;
+	letter-spacing: -1px;
+}
+
+.bg-content-box .text-content .title h2 span {
+	color: #fd5602;
+}
+
+.bg-content-box .text-content p.sub-text {
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 30px;
+	margin-bottom: 0;
+	padding: 0 60px;
+}
+
+/*****************************************
+	Text Content Card Styles
+******************************************/
+.text-content-card {
+	position: relative;
+	padding: 35px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	border-radius: 10px;
+	border-bottom: 2px solid #fd5602;
+}
+
+.text-content-card .sub-text {
+	margin-bottom: 8px;
+	font-size: 18px;
+	line-height: 18px;
+	font-weight: 700;
+	color: #2e2c2c;
+}
+
+.text-content-card .title-with-line .title h2 {
+	font-family: "Noto Sans Display", sans-serif;
+	font-size: 35px;
+	line-height: 45px;
+	font-weight: 700;
+	color: #2e2c2c;
+}
+
+.text-content-card .text-box .text-content-card .text-box p {
+	color: #676767;
+}
+
+.job-short-details-card {
+	position: relative;
+	padding: 20px;
+	background-color: #fff;
+	border: 1px solid #fd5602;
+	border-radius: 7px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	width: 300px;
+}
+
+.job-short-details-card .job-title {
+	font-family: "Noto Sans Display", sans-serif;
+	font-size: 22px;
+	line-height: 28px;
+	color: #2e2c2c;
+	margin-bottom: 15px;
+	transition: all 0.3s;
+}
+
+.job-short-details-card:hover .job-title {
+	color: #fd5602;
+}
+
+
+.job-short-details-card .job-tags li {
+	position: relative;
+	color: #2e2c2c;
+	padding-left: 25px;
+	margin-bottom: 5px;
+}
+
+.job-short-details-card .job-tags li::before {
+	position: absolute;
+	left: 0;
+	top: 0;
+	font-family: "Material Icons Outlined";
+	content: "";
+	font-size: 20px;
+	color: #fd5602;
+}
+
+.job-short-details-card .job-tags li span {
+	color: 676767;
+}
+
+.job-short-details-card .job-tags li.deadline::before {
+	content: "event_available";
+}
+
+.job-short-details-card .job-tags li.location::before {
+	content: "room";
+	font-weight: 600;
+}
+
+.job-short-details-card .btn-box {
+	margin-top: 20px;
+}
+
+.job-short-details-card .btn-box a.btn {
+	font-size: 14px;
+	padding: 5px 20px;
 }
 
 /*=============================================================
@@ -3773,4 +4074,81 @@ ul.icon-list-box li .text a:hover {
 
 .selfcare-content-section .text-box .app-btn-box img {
 	width: 250px;
+}
+
+/*========================================================================================
+	About Us Page Styles
+========================================================================================*/
+.about-us-page {
+	position: relative;
+}
+
+.about-us-page .about-us-text-content {
+	position: relative;
+	padding: 60px 0px 20px;
+	text-align: center;
+}
+
+.about-us-page .about-us-text-content .title {
+	margin-bottom: 30px;
+}
+
+.about-us-page .about-us-text-content .title h2 {
+	font-family: "Noto Sans Display", sans-serif;
+	font-size: 45px;
+	line-height: 45px;
+	font-weight: 700;
+	color: #fd5602;
+}
+
+.about-us-page .about-us-text-content .text-box p:last-child {
+	margin-bottom: 0;
+}
+
+/*****************************************
+	Mission Vision Section  Styles
+******************************************/
+.mission-vision-section {
+	padding: 0 150px 60px;
+}
+
+/*****************************************
+	Career Section Styles
+******************************************/
+.about-us-page .career-section {
+	position: relative;
+	padding: 60px 0;
+}
+
+.career-section .job-listing-container {
+	margin-top: 50px;
+}
+
+.career-section .job-listing-container .job-listing-carousel .job-short-details-card {
+	width: 100%;
+}
+
+.career-section .job-listing-container .job-listing-carousel.owl-carousel .owl-nav {
+	margin-top: 30px;
+	text-align: left;
+}
+
+.career-section .job-listing-container .view-all-jobs-btn-box {
+	position: absolute;
+	bottom: 7px;
+	right: 10px;
+	text-align: center;
+	z-index: 1;
+}
+
+.career-section .job-listing-container .view-all-jobs-btn-box .btn {
+	padding: 6px 25px;
+	font-size: 14px;
+}
+
+/*========================================================================================
+	Link3 Career Page Styles
+========================================================================================*/
+.link3-career-page {
+	position: relative;
 }

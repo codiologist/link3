@@ -123,4 +123,53 @@
 			self.html("Show Offer");
 		}
 	});
+
+	//Text Content Card Title Line Width
+	var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+	var targetTitleDiv = $(".title-with-line .line");
+
+	function titleLineWidthCalculation(el) {
+		const titleWidth = $(".title-with-line .title").width();
+		const titleLineWidth = $(".title-with-line .line").width();
+		if (isMobile) {
+			el.css("width", titleLineWidth - titleWidth - 15);
+		} else {
+			el.css("width", titleLineWidth - titleWidth - 22);
+		}
+	}
+
+	titleLineWidthCalculation(targetTitleDiv);
+
+	// Client Carousel
+	$("#embassyCarousel, #bankCarousel").owlCarousel({
+		stagePadding: 50,
+		margin: 20,
+		loop: true,
+		items: 5,
+		nav: true,
+		autoplayTimeout: 5000,
+		smartSpeed: 800,
+		nav: true,
+		loop: true,
+		dots: false,
+		pagination: false,
+		autoHeight: false,
+		navText: ['<span><img src="assets/img/icons/primary-chevron-left.svg"></span>', '<span><img src="assets/img/icons/primary-chevron-right.svg"></span>'],
+		responsive: {
+			0: {
+				items: 1,
+				stagePadding: 50,
+				margin: 10,
+			},
+			600: {
+				items: 3,
+			},
+			1000: {
+				items: 4,
+			},
+			1900: {
+				items: 6,
+			},
+		},
+	});
 })(window.jQuery);
