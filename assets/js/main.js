@@ -132,19 +132,22 @@
 			.appendTo(this);
 	});
 
-	var targetTitleDiv = $(".title-with-line .line");
+	//var targetTitleDiv = $(".title-with-line .line");
 
 	function titleLineWidthCalculation(el) {
-		const titleWidth = $(".title-with-line .title").width();
-		const titleLineWidth = $(".title-with-line .line").width();
+		const titleEml = el.find('.title');
+		const lineEml  = el.find('.line');
+		const titleWidth = titleEml.width();
+		const titleLineWidth = lineEml.width();
 		if (isMobile) {
-			el.css("width", titleLineWidth - titleWidth - 15);
+			lineEml.css("width", titleLineWidth - titleWidth - 15);
 		} else {
-			el.css("width", titleLineWidth - titleWidth - 22);
+			lineEml.css("width", titleLineWidth - titleWidth - 22);
 		}
 		console.log(titleWidth);
 	}
-
-	titleLineWidthCalculation(targetTitleDiv);
+	$( ".title-with-line" ).each(function( index ) {
+		titleLineWidthCalculation($(this));
+	});
 
 })(window.jQuery);
