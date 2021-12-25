@@ -816,8 +816,7 @@ Device Optimize Media Queries
 	}
 
 	.main-header.fixed-header .logo-box .logo img {
-		transition: height 300ms ease;
-		height: 65px;
+		transform: scale(0.98);
 	}
 
 	/*****************************************
@@ -853,17 +852,6 @@ Device Optimize Media Queries
 		font-size: 22px;
 		line-height: 60px;
 		bottom: 95px;
-	}
-
-	.pay-bill-btn-box {
-		width: 65px;
-		height: 65px;
-	}
-
-	.pay-bill-btn-box a.paybill-btn {
-		font-size: 16px;
-		line-height: 17px;
-		margin-top: 13px;
 	}
 
 	/*****************************************
@@ -1287,6 +1275,20 @@ Device Optimize Media Queries
 	.text-content-card .title h2 {
 		font-size: 30px;
 		line-height: 40px;
+	}
+
+	.text-content-card .video-box {
+		width: 100%;
+	}
+
+	.text-content-card .video-box .play-btn a {
+		width: 60px;
+		height: 60px;
+		line-height: 60px;
+	}
+
+	.text-content-card .video-box .play-btn a img {
+		width: 40px;
 	}
 
 	/*========================================================================================
@@ -1839,6 +1841,31 @@ Device Optimize Media Queries
 		bottom: 7px;
 		right: 10px;
 	}
+
+	/*========================================================================================
+		Career Page Styles
+	========================================================================================*/
+
+	.link3-career-page .about-link3-career-section {
+		padding: 30px 0;
+	}
+
+	.link3-career-page .link3-current-jobs-section {
+		padding: 30px 0 20px;
+	}
+
+	.link3-career-page .link3-current-jobs-section .section-title {
+		margin-bottom: 5px;
+	}
+
+	.link3-career-page .link3-working-environment-section{
+		padding: 20px 0;
+	}
+
+	.link3-career-page .job-application-form-section{
+		padding: 20px 0;
+	}
+
 }
 
 @media only screen and (max-width: 375px) {
@@ -1870,4 +1897,113 @@ Device Optimize Media Queries
 		font-size: 35px;
 		line-height: 45px;
 	}
+}
+
+
+
+
+.custom-accordion .card {
+	margin-bottom: 30px;
+	border-bottom: 1px solid rgba(0, 0, 0, .125)
+}
+
+.custom-accordion .card:not(:last-of-type) {
+	border-bottom: 1px solid rgba(0, 0, 0, .125)
+}
+
+.custom-accordion .card .card-header {
+	position: relative;
+	padding: 0;
+	background-image: linear-gradient(-130deg, #FFC536 0%, #FF7A2E 100%);
+}
+
+.custom-accordion .card .card-header h2 {
+	position: relative;
+	text-align: left;
+}
+
+.custom-accordion .card .card-header h2 .btn {
+	font-size: 20px;
+	font-weight: 700;
+	text-align: left;
+	background-color: transparent;
+	color: #fff;
+	padding-right: 45px;
+}
+
+.custom-accordion .card .card-header h2 .btn::before {
+	position: absolute;
+	right: 15px;
+	top: 5px;
+	font-size: 20px;
+	line-height: 40px;
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 700;
+	content: '\f077';
+	color: #000;
+}
+
+.custom-accordion .card .card-header h2 .btn.collapsed::before {
+	content: '\f078';
+}
+
+.custom-accordion .card-body {
+	position: relative;
+}
+
+.custom-accordion .card-body::before {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+	height: 100%;
+	content: '';
+	background-image: url(../img/lines-1.png);
+	background-size: 100%;
+	background-position: top right;
+	background-repeat: no-repeat;
+	opacity: .5;
+
+}
+
+.custom-accordion .card-body .text-box {
+	margin-bottom: 25px;
+}
+
+.custom-accordion .card-body .text-box .title {
+	margin-bottom: 8px;
+}
+
+.custom-accordion .card-body .text-box .title h3 {
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 24px;
+	color: #072F5F;
+}
+
+.custom-accordion .card-body .text-box p {
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.custom-accordion .card-body .text-box ul {
+	margin-bottom: 20px;
+}
+
+.custom-accordion .card-body .text-box ul li {
+	position: relative;
+	padding-left: 30px;
+}
+
+.custom-accordion .card-body .text-box ul li::before {
+	position: absolute;
+	top: 3px;
+	left: 0;
+	content: "";
+	background-image: url(../img/symbol-2.png);
+	width: 20px;
+	height: 20px;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: top;
 }

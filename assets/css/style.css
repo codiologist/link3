@@ -306,15 +306,10 @@ img {
 
 .pay-bill-btn-box {
 	position: fixed;
-	bottom: 20px;
-	right: 20px;
-	width: 55px;
-	height: 55px;
+	top: 30%;
+	right: 0px;
 	z-index: 100;
 	cursor: pointer;
-	background: linear-gradient(180deg, #ffaf42 -22.75%, #fd5602 100%);
-	border: 2px solid #fff;
-	border-radius: 50%;
 	-webkit-transition: all 300ms ease;
 	-moz-transition: all 300ms ease;
 	-ms-transition: all 300ms ease;
@@ -455,7 +450,15 @@ img {
 .main-header .logo-box .logo img {
 	display: inline-block;
 	max-width: 100%;
-	min-height: 55px;
+	min-height: 65px;
+	-webkit-transition: all 300ms ease;
+	-ms-transition: all 300ms ease;
+	-o-transition: all 300ms ease;
+	-moz-transition: all 300ms ease;
+	transition: all 300ms ease;
+}
+
+.main-header .main-box .logo-box .logo img {
 	-webkit-transition: all 300ms ease;
 	-ms-transition: all 300ms ease;
 	-o-transition: all 300ms ease;
@@ -935,6 +938,10 @@ img {
 /*****************************************
 	Fixed Header Logo Styles
 ******************************************/
+
+.main-header.fixed-header .logo-box .logo img {
+	transform: scale(0.9);
+}
 
 .main-header.fixed-header .main-box .logo-box .logo img.logo-light {
 	display: none;
@@ -1825,7 +1832,7 @@ ul.icon-list-box li .text a:hover {
 	align-items: center;
 	justify-content: center;
 	border-radius: 30px;
-	margin-top: 60px;
+	margin-top: 30px;
 }
 
 .bg-content-box .bg-image {
@@ -1916,6 +1923,56 @@ ul.icon-list-box li .text a:hover {
 	color: #676767;
 }
 
+.text-content-card .video-box {
+	position: relative;
+	width: 800px;
+	margin: 30px auto;
+	overflow: hidden;
+	border-radius: 15px;
+}
+
+.text-content-card .video-box .video-thumb {
+	position: relative;
+	text-align: center;
+}
+
+.text-content-card .video-box .video-thumb::before {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.text-content-card .video-box .play-btn {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.text-content-card .video-box .play-btn a {
+	display: block;
+	width: 70px;
+	height: 70px;
+	background-color: #fff;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 70px;
+	box-shadow: 0px 2px 39px rgba(253, 86, 2, 0.46);
+}
+
+.text-content-card .video-box .play-btn a img {
+	position: relative;
+	left: 3px;
+}
+
+/*****************************************
+	Job Short Details Styles
+******************************************/
 .job-short-details-card {
 	position: relative;
 	padding: 20px;
@@ -1938,7 +1995,6 @@ ul.icon-list-box li .text a:hover {
 .job-short-details-card:hover .job-title {
 	color: #fd5602;
 }
-
 
 .job-short-details-card .job-tags li {
 	position: relative;
@@ -4151,4 +4207,68 @@ ul.icon-list-box li .text a:hover {
 ========================================================================================*/
 .link3-career-page {
 	position: relative;
+}
+
+/*****************************************
+	About Link3 Career Section Styles
+******************************************/
+.link3-career-page .about-link3-career-section {
+	padding: 60px 0;
+}
+
+/*****************************************
+	Link3 Current Jobs Styles
+******************************************/
+.link3-career-page .link3-current-jobs-section {
+	padding: 60px 0;
+	background-color: #f2f3f4;
+}
+
+.link3-career-page .link3-current-jobs-section .section-title {
+	margin-bottom: 30px;
+}
+
+.link3-career-page .link3-current-jobs-section .job-listing-container {
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+	margin-left: -15px;
+	margin-right: -15px;
+	justify-content: center;
+}
+
+.link3-career-page .link3-current-jobs-section .job-listing-container .job-card-item {
+	padding: 15px;
+}
+
+/*****************************************
+	Link3 Working Environment Styles
+******************************************/
+.link3-career-page .link3-working-environment-section {
+	padding: 80px 0 60px;
+}
+
+/*****************************************
+	Job Application Form Styles
+******************************************/
+.link3-career-page .job-application-form-section {
+	padding: 60px 0;
+	background-color: #f2f3f4;
+}
+
+.link3-career-page .job-application-form-section .section-title{
+	margin-bottom: 30px;
+}
+
+.link3-career-page .job-application-form-section .job-application-form{
+	padding: 35px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.125);
+}
+
+/*****************************************
+	Job FAQ Styles
+******************************************/
+.link3-career-page .jobf-faq-section {
+	padding: 60px 0;
 }
