@@ -144,6 +144,11 @@ img {
 	appearance: none;
 }
 
+.custom-select-box select option:hover {
+	background-color: #fe6e00;
+	color: #fff;
+}
+
 /*========================================================================================
 	3. Template Global Styles
 ========================================================================================*/
@@ -282,8 +287,8 @@ img {
 
 .scroll-to-top {
 	position: fixed;
-	bottom: 80px;
-	right: 25px;
+	bottom: 10px;
+	right: 10px;
 	width: 50px;
 	height: 50px;
 	color: #fff;
@@ -306,8 +311,8 @@ img {
 
 .pay-bill-btn-box {
 	position: fixed;
-	top: 30%;
-	right: 0px;
+	top: 55%;
+	right: -1px;
 	z-index: 100;
 	cursor: pointer;
 	-webkit-transition: all 300ms ease;
@@ -1022,7 +1027,7 @@ img {
 .page-breadcurmb .title {
 	position: absolute;
 	top: 60%;
-	left: 11%;
+	left: 50%;
 	transform: translate(-50%, -50%);
 	z-index: 2;
 	text-align: center;
@@ -1052,6 +1057,57 @@ img {
 	line-height: 26px;
 	margin: 0;
 	margin-top: 15px;
+	color: #fff;
+}
+
+/*****************************************
+	Page Breadcurmb (Banner) Styles
+******************************************/
+.page-breadcurmb.has-custom-banner .bg-banner {
+	position: relative;
+}
+
+.page-breadcurmb.has-custom-banner .bg-banner::before {
+	position: absolute;
+	left: 0;
+	top: 0;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 1;
+}
+
+.page-breadcurmb.has-custom-banner .center-content-box {
+	position: absolute;
+	left: 50%;
+	top: 60%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	z-index: 1;
+}
+
+.page-breadcurmb.has-custom-banner .center-content-box h2 {
+	font-family: "Noto Sans Display", sans-serif;
+	font-size: 45px;
+	line-height: 55px;
+	font-weight: 700;
+	color: #fff;
+	margin-bottom: 20px;
+}
+
+.page-breadcurmb.has-custom-banner .center-content-box h2 span {
+	color: #fd5602;
+}
+
+.page-breadcurmb.has-custom-banner .center-content-box h4 {
+	font-size: 26px;
+	font-weight: 700;
+	color: #fd5602;
+}
+
+.page-breadcurmb.has-custom-banner .center-content-box p {
+	font-size: 18px;
 	color: #fff;
 }
 
@@ -1651,6 +1707,10 @@ img {
 	transition: all 300ms ease;
 }
 
+.menu-links li a:hover {
+	color: #fd5602 !important;
+}
+
 .menu-links li a:hover::before {
 	left: 5px;
 	color: #fd5602;
@@ -1711,6 +1771,7 @@ ul.icon-list-box li .text a:hover {
 .custom-accordion .card {
 	background-color: transparent;
 	margin-bottom: 30px;
+	border: none;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
 
@@ -1722,6 +1783,7 @@ ul.icon-list-box li .text a:hover {
 	position: relative;
 	padding: 0;
 	background-color: transparent;
+	border: none;
 }
 
 .custom-accordion .card .card-header h2 {
@@ -1730,6 +1792,7 @@ ul.icon-list-box li .text a:hover {
 }
 
 .custom-accordion .card .card-header h2 .btn {
+	padding-left: 15px;
 	font-size: 20px;
 	font-weight: 700;
 	text-align: left;
@@ -1818,6 +1881,14 @@ ul.icon-list-box li .text a:hover {
 	background-color: #fd5602;
 	color: #fff;
 	border-radius: 50px;
+}
+
+/*****************************************
+	Likn3 Custom Modal Styles
+******************************************/
+.link3-custom-modal button.close {
+	color: #2e2c2c !important;
+	opacity: 1;
 }
 
 /*****************************************
@@ -1925,7 +1996,7 @@ ul.icon-list-box li .text a:hover {
 
 .text-content-card .video-box {
 	position: relative;
-	width: 800px;
+	/* width: 800px; */
 	margin: 30px auto;
 	overflow: hidden;
 	border-radius: 15px;
@@ -2014,7 +2085,7 @@ ul.icon-list-box li .text a:hover {
 }
 
 .job-short-details-card .job-tags li span {
-	color: 676767;
+	color: #676767;
 }
 
 .job-short-details-card .job-tags li.deadline::before {
@@ -2407,6 +2478,15 @@ ul.icon-list-box li .text a:hover {
 	margin: 0 auto;
 	background: #676767;
 	border-bottom: 0.038rem solid #676767;
+}
+
+.footer-mobile-widget-container .menu-links li a {
+	color: #2e2c2c !important;
+}
+
+.footer-mobile-widget-container .menu-links li a:hover,
+.footer-mobile-widget-container .menu-links li a:before {
+	color: #fd5602 !important;
 }
 
 /*========================================================================================
@@ -4248,22 +4328,21 @@ ul.icon-list-box li .text a:hover {
 	padding: 80px 0 60px;
 }
 
+.working-environment-content {
+	padding: 20px;
+}
+
 /*****************************************
 	Job Application Form Styles
 ******************************************/
-.link3-career-page .job-application-form-section {
-	padding: 60px 0;
-	background-color: #f2f3f4;
+.link3-career-page .link3-working-environment-section .job-application-form-container {
+	padding: 20px;
 }
 
-.link3-career-page .job-application-form-section .section-title{
-	margin-bottom: 30px;
-}
-
-.link3-career-page .job-application-form-section .job-application-form{
-	padding: 35px;
+.link3-career-page .link3-working-environment-section .job-application-form-container .job-application-form {
 	border-radius: 10px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.125);
+	padding: 35px;
+	box-shadow: 0 0 10px rgb(0 0 0 / 30%);
 }
 
 /*****************************************
@@ -4271,4 +4350,646 @@ ul.icon-list-box li .text a:hover {
 ******************************************/
 .link3-career-page .jobf-faq-section {
 	padding: 60px 0;
+	background-color: #fafafa;
+}
+
+.link3-career-page .jobf-faq-section .section-title {
+	margin-bottom: 30px;
+}
+
+.link3-career-page .jobf-faq-section .custom-accordion .card .card-header h2 .btn {
+	color: #464646;
+	padding-bottom: 20px;
+	padding-left: 0;
+}
+
+.link3-career-page .jobf-faq-section .custom-accordion .card-body {
+	padding-top: 0;
+	/* padding-left: 0; */
+}
+
+/*****************************************
+	Job Details Modal Styles
+******************************************/
+#jobDetailsModal .close {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	z-index: 1;
+}
+
+#jobDetailsModal .job-details-content {
+}
+
+#jobDetailsModal .job-details-content .job-title {
+	font-family: "Noto Sans Display", sans-serif;
+	font-size: 26px;
+	font-weight: 700;
+	line-height: 28px;
+	color: #2e2c2c;
+	margin-bottom: 25px;
+	transition: all 0.3s;
+	margin-right: 35px;
+}
+
+#jobDetailsModal .job-details-content:hover .job-title {
+	color: #fd5602;
+}
+
+#jobDetailsModal .job-details-content .job-tags li {
+	position: relative;
+	color: #2e2c2c;
+	padding-left: 25px;
+	margin-bottom: 5px;
+}
+
+#jobDetailsModal .job-details-content .job-tags li::before {
+	position: absolute;
+	left: 0;
+	top: 0;
+	font-family: "Material Icons Outlined";
+	content: "";
+	font-size: 20px;
+	color: #fd5602;
+}
+
+#jobDetailsModal .job-details-content .job-tags li span {
+	color: #676767;
+}
+
+#jobDetailsModal .job-details-content .job-tags li.deadline::before {
+	content: "event_available";
+}
+
+#jobDetailsModal .job-details-content .job-tags li.location::before {
+	content: "room";
+	font-weight: 600;
+}
+
+#jobDetailsModal .job-details-content .job-description {
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+
+#jobDetailsModal .job-details-content .job-description h3,
+#jobDetailsModal .job-details-content .job-requirements h3 {
+	font-size: 20px;
+	font-weight: 700;
+	margin-bottom: 5px;
+}
+
+#jobDetailsModal .job-details-content .job-description p,
+#jobDetailsModal .job-details-content .job-requirements p {
+	font-size: 14px;
+	line-height: 20px;
+}
+
+#jobDetailsModal .job-details-content .job-requirements .requirement-list {
+	padding-left: 15px;
+}
+
+#jobDetailsModal .job-details-content .job-apply-btn-box {
+	text-align: center;
+	margin: 25px 0 10px;
+}
+
+/*========================================================================================
+	Support Page Styles
+========================================================================================*/
+.support-page {
+	position: relative;
+}
+
+/*****************************************
+	Get Connection Step Styles
+******************************************/
+
+.care-icon-section {
+	position: relative;
+	padding: 50px 200px;
+	background: #fff;
+}
+
+.care-icon-container {
+	position: relative;
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.care-icon-container .icon-box {
+	width: 33.33%;
+	position: relative;
+	text-align: center;
+}
+
+.care-icon-container .icon-box .icon {
+	margin-bottom: 25px;
+}
+
+.care-icon-container .icon-box .icon img {
+	height: 150px;
+}
+
+.care-icon-container .icon-box .text-box {
+}
+
+.care-icon-container .icon-box .text-box p {
+	margin-bottom: 0;
+	font-size: 28px;
+	line-height: 28px;
+	font-weight: 700;
+}
+
+.care-icon-container .icon-box .text-box p span {
+	color: #fd5602;
+}
+
+/*****************************************
+	 Reach Us Styles
+******************************************/
+
+.reach-us-section {
+	padding: 40px 0 40px;
+	background-color: #f2f3f4;
+}
+
+.reach-us-section .section-title {
+	margin-bottom: 40px;
+}
+
+.reach-us-section .reach-us-text-box {
+	position: relative;
+	border-radius: 30px;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+.reach-us-section .reach-us-text-box .bg-image {
+	position: relative;
+}
+
+.reach-us-section .reach-us-text-box .bg-image img {
+	border-radius: 30px;
+}
+
+.reach-us-section .reach-us-text-box .bg-image::before {
+	position: absolute;
+	left: 0;
+	top: 0;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 1;
+	border-radius: 30px;
+}
+
+.reach-us-section .reach-us-text-box .contact-info {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	z-index: 1;
+}
+
+.reach-us-section .reach-us-text-box .contact-info h2 a {
+	font-family: "Noto Sans Display", sans-serif;
+	font-size: 40px;
+	line-height: 40px;
+	color: #fff;
+	font-weight: 700;
+	margin-bottom: 0;
+}
+
+.reach-us-section .reach-us-text-box .contact-info h3 {
+	font-size: 28px;
+	line-height: 28px;
+	margin-bottom: 15px;
+	color: #fff;
+	background: linear-gradient(141.97deg, #fd5602 -20.95%, #ff8303 125.47%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-weight: 700;
+}
+
+.reach-us-section .reach-us-text-box .contact-info p {
+	font-size: 20px;
+	line-height: 20px;
+	margin: 10px 0;
+	color: #fff;
+	font-weight: 700;
+	background: linear-gradient(141.97deg, #fd5602 -20.95%, #ff8303 125.47%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+/*****************************************
+	Support Video Section Styles
+******************************************/
+
+.support-video-section {
+	position: relative;
+	padding: 40px 0 60px;
+}
+
+.support-video-section .section-title {
+	margin-bottom: 30px;
+}
+
+.support-video-section .video-box {
+	position: relative;
+	border-radius: 30px;
+	overflow: hidden;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.support-video-section .video-box .video-thumb {
+	position: relative;
+}
+
+.support-video-section .video-box .video-thumb img {
+}
+
+.support-video-section .video-box .overlay-btn {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.support-video-section .video-box a {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(14, 16, 48, 0.5);
+	border-radius: 10px;
+}
+
+.support-video-section .video-box a span.icon {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	height: 80px;
+	width: 80px;
+	background-color: #ffffff;
+	border-radius: 50%;
+	line-height: 80px;
+	text-align: center;
+	font-size: 20px;
+	padding-left: 5px;
+	color: #5de3a8;
+	margin-top: -40px;
+	margin-left: -40px;
+	text-shadow: 0 10px 14px rgba(188, 17, 103, 0.4);
+	z-index: 8;
+	-webkit-transition: all 1000ms ease;
+	-moz-transition: all 1000ms ease;
+	-ms-transition: all 1000ms ease;
+	-o-transition: all 1000ms ease;
+	transition: all 1000ms ease;
+}
+
+.support-video-section .video-box a:hover .icon {
+	-webkit-transform: rotate(360deg);
+	-ms-transform: rotate(360deg);
+	transform: rotate(360deg);
+}
+
+.support-video-section .video-box a span.icon img {
+	width: 40px;
+}
+
+.support-video-section .video-box a:after,
+.support-video-section .video-box a:before {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	height: 150px;
+	width: 150px;
+	border: 1px solid rgba(255, 117, 3, 0.7);
+	content: "";
+	border-radius: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	-webkit-transition: all 1000ms ease;
+	-moz-transition: all 1000ms ease;
+	-ms-transition: all 1000ms ease;
+	-o-transition: all 1000ms ease;
+	transition: all 1000ms ease;
+}
+
+.support-video-section .video-box a:after {
+	height: 250px;
+	width: 250px;
+}
+
+.support-video-section .video-box a:hover:after,
+.support-video-section .video-box a:hover:before {
+	border: 1px solid rgba(255, 255, 255, 1);
+	height: 0;
+	width: 0;
+}
+
+/*****************************************
+	Sales Center Styles
+******************************************/
+
+.sales-center-section {
+	position: relative;
+	padding: 40px 0 60px;
+	background-color: #f6f6f6;
+}
+
+.sales-center-tab-container {
+	position: relative;
+	margin: 0 80px;
+}
+
+.sales-center-section .section-title {
+	margin-bottom: 40px;
+}
+
+.sales-center-tab-container .nav.nav-tabs {
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	border: none;
+	border-radius: 3px 0px 0px 3px;
+	margin-bottom: 20px;
+}
+
+.sales-center-tab-container .nav.nav-tabs .nav-item {
+	/* width: 100%; */
+	margin-right: 15px;
+}
+
+.sales-center-tab-container .nav.nav-tabs .nav-link {
+	position: relative;
+	display: block;
+	width: 100%;
+	font-size: 16px;
+	line-height: 16px;
+	font-weight: 500;
+	color: #2e2c2c !important;
+	transition: all 0.3s ease;
+	margin-right: 10px;
+	padding: 0px;
+	background: linear-gradient(279.67deg, #f8a70d -7.02%, #fd8020 63.46%);
+	border-radius: 53px;
+	overflow: hidden;
+	border: 2px solid transparent;
+}
+
+.sales-center-tab-container .nav.nav-tabs .nav-link .btn-text {
+	display: block;
+	background-color: #f2f3f4;
+	padding: 12px 25px;
+	transition: all 0.3s ease;
+}
+
+.sales-center-tab-container .nav.nav-tabs .nav-link:hover,
+.sales-center-tab-container .nav.nav-tabs .nav-link.active {
+	box-shadow: 0px 3px 18px rgba(253, 137, 30, 0.32);
+}
+
+.sales-center-tab-container .nav.nav-tabs .nav-link:hover .btn-text,
+.sales-center-tab-container .nav.nav-tabs .nav-link.active .btn-text {
+	background-color: transparent;
+	color: #fff;
+}
+
+.sales-center-tab-container .office-address-container {
+	position: relative;
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+}
+
+.sales-center-tab-container .office-address-container .office-address {
+	position: relative;
+	border: 1px solid #f1f1f1;
+	width: 47%;
+	padding: 20px 30px;
+	border-radius: 10px;
+	background-color: #fff;
+	margin: 15px;
+}
+
+.office-address-container .office-address .title-with-line .title h2 {
+	position: relative;
+	padding-left: 25px;
+	font-family: "Noto Sans Display", sans-serif;
+	font-size: 22px;
+	font-weight: 700;
+	text-transform: capitalize;
+}
+
+.office-address-container .office-address .title-with-line .title h2::before {
+	position: absolute;
+	left: 0;
+	top: 0;
+	font-family: "Font Awesome 5 Free";
+	content: "\f1ad";
+	color: #fd5602;
+	font-size: 20px;
+}
+
+.office-address-container .office-address .title-with-line .line {
+	top: 50%;
+	height: 1px;
+}
+
+.sales-center-tab-container .office-address-container .office-address p {
+	position: relative;
+	padding-left: 25px;
+	margin-bottom: 8px;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 20px;
+	color: #2e2c2c;
+}
+
+.sales-center-tab-container .office-address-container .office-address p::before {
+	position: absolute;
+	left: 0;
+	top: 0;
+	font-family: "Font Awesome 5 Free";
+	color: #fd5602;
+}
+
+.sales-center-tab-container .office-address-container .office-address p.email {
+	margin: 0;
+}
+
+.sales-center-tab-container .office-address-container .office-address p.location::before {
+	content: "\f3c5";
+}
+
+.sales-center-tab-container .office-address-container .office-address p.phone::before {
+	content: "\f879";
+}
+
+.sales-center-tab-container .office-address-container .office-address p.email::before {
+	content: "\f0e0";
+}
+
+/*****************************************
+	Support Contact Us Section Styles
+******************************************/
+.support-contact-form-section {
+	position: relative;
+	padding: 40px 0;
+}
+
+.support-contact-form-section .support-contact-form {
+	border-radius: 10px;
+	padding: 35px;
+	box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+}
+
+.support-contact-form-section .support-contact-form .section-title {
+	margin-bottom: 25px;
+}
+
+.support-contact-form-section .support-contact-form .section-title h2.title {
+	font-size: 40px;
+}
+
+.support-contact-form-section .support-contact-form .section-title p.sub-text {
+	font-size: 16px;
+	margin-top: 0;
+}
+
+/*========================================================================================
+	Pay Bill Page Styles
+========================================================================================*/
+
+.paybill-section {
+	padding: 60px 0;
+}
+
+.paybill-section .bill-discount-tab-container {
+	padding: 30px;
+	padding-top: 20px;
+}
+
+.paybill-section .bill-discount-tab-container .discount-tab {
+	position: relative;
+	padding: 25px 35px;
+	transition: all 0.3s;
+	background-color: #f2f3f4;
+	margin-bottom: 25px;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+.paybill-section .bill-discount-tab-container .discount-tab h3 {
+	font-family: "Noto Sans Display", sans-serif;
+	font-weight: 700;
+	color: #fd5602;
+}
+
+.paybill-section .bill-discount-tab-container .discount-tab p {
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: 500;
+	margin-bottom: 0;
+}
+
+.paybill-section .bill-discount-tab-container .discount-tab:hover,
+.paybill-section .bill-discount-tab-container .discount-tab.active {
+	background-color: #fd5602;
+}
+
+.paybill-section .bill-discount-tab-container .discount-tab:hover h3,
+.paybill-section .bill-discount-tab-container .discount-tab.active h3,
+.paybill-section .bill-discount-tab-container .discount-tab:hover p,
+.paybill-section .bill-discount-tab-container .discount-tab.active p {
+	color: #fff;
+}
+
+.paybill-section .paybill-form-container {
+	padding: 15px;
+}
+
+.paybill-section .paybill-form {
+	border-radius: 10px;
+	padding: 35px;
+	box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+}
+
+.paument-amount-display-box .amount-box {
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+}
+
+.paument-amount-display-box .amount-box p {
+	margin-bottom: 0;
+}
+
+.paument-amount-display-box .amount-box .text-box {
+	text-align: left;
+	width: 70%;
+}
+
+.paument-amount-display-box .amount-box .amount-number {
+	text-align: right;
+	width: 30%;
+}
+
+.paument-amount-display-box .amount-box.total-amount {
+	border-top: 2px solid #676767;
+	padding-top: 15px;
+	margin-top: 15px;
+	font-weight: 700;
+}
+
+/*========================================================================================
+	General FAQ Page Styles
+========================================================================================*/
+.link3-general-faq-page {
+	position: relative;
+}
+
+.link3-general-faq-page .page-breadcurmb{
+	min-height: 250px;
+}
+
+.link3-policy-section {
+	position: relative;
+	padding-top: 50px;
+	padding-bottom: 20px;
+}
+
+.link3-policy-section .text-content-card {
+	margin-bottom: 40px;
+}
+
+/*========================================================================================
+	Link3 Policy Page Styles
+========================================================================================*/
+.link3-policy-page {
+	position: relative;
+}
+
+.link3-policy-page .page-breadcurmb{
+	min-height: 250px;
+}
+
+.link3-faq-section {
+	padding: 60px 0;
+}
+
+.link3-faq-section .link3-custom-tab-container .tab-custom-nav-box .nav.nav-tabs .nav-link{
+	width: 200px;
 }

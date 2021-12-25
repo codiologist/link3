@@ -851,7 +851,7 @@ Device Optimize Media Queries
 		height: 60px;
 		font-size: 22px;
 		line-height: 60px;
-		bottom: 95px;
+		bottom: 10px;
 	}
 
 	/*****************************************
@@ -862,8 +862,16 @@ Device Optimize Media Queries
 		min-height: 400px;
 	}
 
-	.page-breadcurmb .title {
-		left: 13%;
+	.page-breadcurmb.has-custom-banner .center-content-box h2 {
+		font-size: 55px;
+		line-height: 65px;
+		margin-bottom: 20px;
+	}
+
+	.page-breadcurmb.has-custom-banner .center-content-box p {
+		font-size: 24px;
+		line-height: 34px;
+		color: #fff;
 	}
 
 	/*****************************************
@@ -1057,6 +1065,21 @@ Device Optimize Media Queries
 		font-size: 16px;
 		padding: 7px 25px;
 	}
+
+	/*========================================================================================
+		Support Page Styles
+	========================================================================================*/
+	.care-icon-section {
+		padding: 50px 350px;
+	}
+
+	.sales-center-section {
+		padding: 60px 120px;
+	}
+
+	.sales-center-tab-container .office-address-container .office-address {
+		width: 31%;
+	}
 }
 
 @media only screen and (max-width: 1139px) {
@@ -1178,6 +1201,14 @@ Device Optimize Media Queries
 		display: none;
 	}
 
+	.main-header .logo-box .logo img {
+		min-height: 55px;
+	}
+
+	.main-header.fixed-header .logo-box .logo img {
+		transform: scale(1);
+	}
+
 	/*****************************************
 		Template Common Components Styles
 	******************************************/
@@ -1198,6 +1229,21 @@ Device Optimize Media Queries
 		display: block !important;
 	}
 
+	.pay-bill-btn-box {
+		position: fixed;
+		top: 35%;
+	}
+
+	.pay-bill-btn-box a.paybill-btn img {
+		width: 35px;
+	}
+
+	/****** Link Hide Mobile Styles ******/
+
+	.mobile-menu .business-page-link {
+		display: none !important;
+	}
+
 	/****** Section Title Styles ******/
 
 	.section-title {
@@ -1212,18 +1258,42 @@ Device Optimize Media Queries
 		letter-spacing: -0.5px;
 	}
 
+	.section-title p.sub-text {
+		font-size: 18px;
+		line-height: 26px;
+		padding: 0 20px;
+	}
+
 	/******* Page Breadcurmb Styles *******/
 	.page-breadcurmb {
-		min-height: 400px;
+		min-height: 355px;
 	}
 
 	.page-breadcurmb .title {
 		position: absolute;
-		top: auto;
-		bottom: 0px;
-		left: 20px;
-		transform: translate(0%, 0%);
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 		text-align: left;
+	}
+
+	.page-breadcurmb.has-custom-banner {
+		min-height: 100%;
+	}
+
+	.page-breadcurmb.has-custom-banner .center-content-box {
+		width: 100%;
+		padding: 0 25px;
+	}
+
+	.page-breadcurmb.has-custom-banner .center-content-box h2 {
+		font-size: 35px;
+		line-height: 40px;
+	}
+
+	.page-breadcurmb.has-custom-banner .center-content-box p {
+		font-size: 16px;
+		line-height: 20px;
 	}
 
 	/******* Package Card Styles *******/
@@ -1854,18 +1924,152 @@ Device Optimize Media Queries
 		padding: 30px 0 20px;
 	}
 
+	.link3-career-page .link3-current-jobs-section .job-listing-container .job-card-item {
+		padding: 0;
+		margin-bottom: 20px;
+	}
+
 	.link3-career-page .link3-current-jobs-section .section-title {
-		margin-bottom: 5px;
+		margin-bottom: 15px;
 	}
 
-	.link3-career-page .link3-working-environment-section{
+	.link3-career-page .link3-working-environment-section {
 		padding: 20px 0;
 	}
 
-	.link3-career-page .job-application-form-section{
+	.working-environment-content {
+		padding: 0;
+		margin-bottom: 20px;
+	}
+
+	.link3-career-page .job-application-form-section {
 		padding: 20px 0;
 	}
 
+	.link3-career-page .link3-working-environment-section .job-application-form-container {
+		padding: 0;
+	}
+
+	.link3-career-page .jobf-faq-section {
+		padding: 10px;
+	}
+
+	.link3-career-page .jobf-faq-section .custom-accordion .card-body {
+		padding-top: 0;
+		padding-left: 0;
+	}
+
+	.link3-career-page .jobf-faq-section .custom-accordion .card .card-header h2 .btn {
+		font-size: 16px;
+	}
+
+	.link3-career-page .jobf-faq-section .custom-accordion .card .card-header h2 .btn::before {
+		right: 0;
+	}
+
+	/*========================================================================================
+		Support Page Styles
+	========================================================================================*/
+
+	.care-icon-section {
+		padding: 20px 0;
+	}
+
+	.care-icon-container .icon-box .icon img {
+		height: 70px;
+	}
+
+	.care-icon-container .icon-box .text-box p {
+		font-size: 18px;
+		line-height: 18px;
+	}
+
+	.reach-us-section {
+		padding: 40px 0;
+	}
+
+	.reach-us-section .section-title {
+		margin-bottom: 15px;
+	}
+
+	.sales-center-section .section-title {
+		margin-bottom: 15px;
+	}
+
+	.sales-center-tab-container {
+		padding: 0;
+		margin: 0;
+	}
+
+	.sales-center-tab-container .nav.nav-tabs {
+		width: 100%;
+		overflow-y: scroll;
+		padding: 20px;
+		padding-left: 10px;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+	}
+
+	.sales-center-tab-container .office-address-container .office-address {
+		width: 100%;
+	}
+
+	.support-page .footer {
+		margin-top: 0;
+	}
+
+	.support-contact-form-section .support-contact-form {
+		padding: 25px;
+	}
+
+	.support-contact-form-section .support-contact-form .section-title h2.title {
+		font-size: 30px;
+		margin-bottom: 15px;
+	}
+
+	.support-contact-form-section .support-contact-form .section-title p.sub-text {
+		padding: 0;
+	}
+
+	/*========================================================================================
+		Paybill Page Styles
+	========================================================================================*/
+	.paybill-section {
+		padding: 0;
+		padding-top: 20px;
+	}
+
+	.paybill-section .bill-discount-tab-container {
+		padding: 0;
+	}
+
+	.paybill-section .paybill-form-container {
+		padding: 0;
+	}
+
+	.paybill-section .paybill-form {
+		padding: 20px;
+	}
+
+	/*========================================================================================
+		General Faq Page Styles
+	========================================================================================*/
+	.link3-faq-section .nav.nav-tabs {
+		width: 100%;
+		overflow-y: scroll;
+		padding: 20px;
+		padding-left: 10px;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		padding: 0;
+	}
+
+	.link3-faq-section .link3-custom-tab-container .tab-custom-nav-box .nav.nav-tabs .nav-link {
+		width: 100%;
+		border-radius: 5px;
+		font-size: 16px;
+		line-height: 20px;
+	}
 }
 
 @media only screen and (max-width: 375px) {
@@ -1876,8 +2080,8 @@ Device Optimize Media Queries
 	}
 
 	.section-title h2.title {
-		font-size: 32px;
-		line-height: 42px;
+		font-size: 40px;
+		line-height: 45px;
 		font-weight: 700;
 		color: #2e2c2c;
 		letter-spacing: -0.5px;
@@ -1897,113 +2101,4 @@ Device Optimize Media Queries
 		font-size: 35px;
 		line-height: 45px;
 	}
-}
-
-
-
-
-.custom-accordion .card {
-	margin-bottom: 30px;
-	border-bottom: 1px solid rgba(0, 0, 0, .125)
-}
-
-.custom-accordion .card:not(:last-of-type) {
-	border-bottom: 1px solid rgba(0, 0, 0, .125)
-}
-
-.custom-accordion .card .card-header {
-	position: relative;
-	padding: 0;
-	background-image: linear-gradient(-130deg, #FFC536 0%, #FF7A2E 100%);
-}
-
-.custom-accordion .card .card-header h2 {
-	position: relative;
-	text-align: left;
-}
-
-.custom-accordion .card .card-header h2 .btn {
-	font-size: 20px;
-	font-weight: 700;
-	text-align: left;
-	background-color: transparent;
-	color: #fff;
-	padding-right: 45px;
-}
-
-.custom-accordion .card .card-header h2 .btn::before {
-	position: absolute;
-	right: 15px;
-	top: 5px;
-	font-size: 20px;
-	line-height: 40px;
-	font-family: 'Font Awesome 5 Free';
-	font-weight: 700;
-	content: '\f077';
-	color: #000;
-}
-
-.custom-accordion .card .card-header h2 .btn.collapsed::before {
-	content: '\f078';
-}
-
-.custom-accordion .card-body {
-	position: relative;
-}
-
-.custom-accordion .card-body::before {
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	width: 100%;
-	height: 100%;
-	content: '';
-	background-image: url(../img/lines-1.png);
-	background-size: 100%;
-	background-position: top right;
-	background-repeat: no-repeat;
-	opacity: .5;
-
-}
-
-.custom-accordion .card-body .text-box {
-	margin-bottom: 25px;
-}
-
-.custom-accordion .card-body .text-box .title {
-	margin-bottom: 8px;
-}
-
-.custom-accordion .card-body .text-box .title h3 {
-	font-size: 18px;
-	font-weight: 500;
-	line-height: 24px;
-	color: #072F5F;
-}
-
-.custom-accordion .card-body .text-box p {
-	font-size: 14px;
-	line-height: 20px;
-}
-
-.custom-accordion .card-body .text-box ul {
-	margin-bottom: 20px;
-}
-
-.custom-accordion .card-body .text-box ul li {
-	position: relative;
-	padding-left: 30px;
-}
-
-.custom-accordion .card-body .text-box ul li::before {
-	position: absolute;
-	top: 3px;
-	left: 0;
-	content: "";
-	background-image: url(../img/symbol-2.png);
-	width: 20px;
-	height: 20px;
-	background-size: 100%;
-	background-repeat: no-repeat;
-	background-position: top;
 }
