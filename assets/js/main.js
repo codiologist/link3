@@ -126,9 +126,23 @@
 
 	//Text Content Card Title Line Width
 	var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+<<<<<<< HEAD
 	function titleLineWidthCalculation(el) {
 		const titleEml = el.find(".title");
 		const lineEml = el.find(".line");
+=======
+	var abc = $(".title-with-line").each(function (i, e) {
+		$(this)
+			.attr("id", "id_" + i)
+			.appendTo(this);
+	});
+
+	//var targetTitleDiv = $(".title-with-line .line");
+
+	function titleLineWidthCalculation(el) {
+		const titleEml = el.find('.title');
+		const lineEml  = el.find('.line');
+>>>>>>> 39edd4a31f518d695ffdac2e1f14cc324cd2b3b7
 		const titleWidth = titleEml.width();
 		const titleLineWidth = lineEml.width();
 		if (isMobile) {
@@ -138,8 +152,15 @@
 		}
 		console.log(titleWidth);
 	}
+<<<<<<< HEAD
 	
 	$(".title-with-line").each(function (index) {
 		titleLineWidthCalculation($(this));
 	});
+=======
+	$( ".title-with-line" ).each(function( index ) {
+		titleLineWidthCalculation($(this));
+	});
+
+>>>>>>> 39edd4a31f518d695ffdac2e1f14cc324cd2b3b7
 })(window.jQuery);
