@@ -1608,7 +1608,7 @@ img {
 	right: 5px;
 	top: 55%;
 	width: 100%;
-	height: 2px;
+	height: 1px;
 	background-color: #676767;
 }
 
@@ -4345,6 +4345,78 @@ ul.icon-list-box li .text a:hover {
 	box-shadow: 0 0 10px rgb(0 0 0 / 30%);
 }
 
+.job-application-form .submit-btn-box {
+	margin-top: 0px;
+}
+
+.job-application-form .cv-uploader .jFiler {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin-bottom: 10px;
+}
+
+.job-application-form .cv-uploader .jFiler-theme-default .jFiler-input {
+	background: #fff;
+	box-shadow: none;
+	width: 160px;
+	border: none;
+	margin: 0;
+	height: 100%;
+}
+
+.job-application-form .cv-uploader .jFiler-theme-default .jFiler-input-caption {
+	display: none;
+}
+
+.job-application-form .cv-uploader .jFiler-theme-default .jFiler-input-button {
+	position: relative;
+	float: none;
+	background: #feeae0;
+	border: none;
+	color: #fd5602;
+	font-family: inherit;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 16px;
+	padding: 15px 20px 15px 45px;
+	border-radius: 5px;
+}
+
+.job-application-form .cv-uploader .jFiler-theme-default .jFiler-input-button::before {
+	position: absolute;
+	left: 5%;
+	top: 50%;
+	transform: translate(0%, -50%);
+	content: "";
+	width: 28px;
+	height: 28px;
+	background-image: url(../img/icons/file-upload-icon.svg);
+	background-position: center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.job-application-form .cv-uploader .jFiler-items.jFiler-row {
+	margin-top: 15px;
+}
+
+.job-application-form .cv-uploader .jFiler-item .jFiler-item-icon {
+	margin-top: 10px;
+	color: #fd5602;
+}
+
+.job-application-form .cv-uploader .jFiler-item .jFiler-item-icon .jfi-file-ext-doc::before,
+.job-application-form .cv-uploader .jFiler-item .jFiler-item-icon .jfi-file-ext-docx::before {
+	font-family: "Font Awesome 5 Free";
+	content: "\f1c2";
+}
+
+.job-application-form .cv-uploader .jFiler-item .jFiler-item-icon .jfi-file-ext-pdf::before {
+	font-family: "Font Awesome 5 Free";
+	content: "\f1c1";
+}
+
 /*****************************************
 	Job FAQ Styles
 ******************************************/
@@ -4961,7 +5033,7 @@ ul.icon-list-box li .text a:hover {
 	position: relative;
 }
 
-.link3-general-faq-page .page-breadcurmb{
+.link3-general-faq-page .page-breadcurmb {
 	min-height: 250px;
 }
 
@@ -4982,7 +5054,7 @@ ul.icon-list-box li .text a:hover {
 	position: relative;
 }
 
-.link3-policy-page .page-breadcurmb{
+.link3-policy-page .page-breadcurmb {
 	min-height: 250px;
 }
 
@@ -4990,6 +5062,6 @@ ul.icon-list-box li .text a:hover {
 	padding: 60px 0;
 }
 
-.link3-faq-section .link3-custom-tab-container .tab-custom-nav-box .nav.nav-tabs .nav-link{
+.link3-faq-section .link3-custom-tab-container .tab-custom-nav-box .nav.nav-tabs .nav-link {
 	width: 200px;
 }

@@ -35,6 +35,9 @@
 	<!-- Fancybox Css -->
 	<link rel="stylesheet" href="assets/plugins/fancybox/jquery.fancybox.min.css" />
 
+	<!-- File Uploader -->
+	<link rel="stylesheet" href="assets/plugins/jquery-filler/jquery.filer.css">
+
 	<!-- Template Style CSS -->
 	<link rel="stylesheet" href="assets/css/style.css" />
 
@@ -347,8 +350,8 @@
 											</div>
 										</div>
 										<div class="form-group">
-											<div class="upload-cv">
-
+											<div class="cv-uploader">
+												<input type="file" name="files[]" id="cv_uploader">
 											</div>
 										</div>
 										<div class="form-group mb-0">
@@ -545,7 +548,7 @@
 				</div>
 			</section>
 			<!-- / End Job FAQ Section -->
-			
+
 		</div>
 		<!-- / End Page Container-->
 
@@ -737,7 +740,6 @@
 		</footer>
 		<!-- / End  Footer -->
 
-
 	</div>
 	<!-- / End Page Wrapper -->
 
@@ -806,7 +808,27 @@
 	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/wow.js"></script>
 	<script src="assets/plugins/fancybox/jquery.fancybox.min.js"></script>
+	<script src="assets/plugins/jquery-filler/jquery.filer.min.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script>
+		$(document).ready(function () {
+			$("#cv_uploader").filer({
+				showThumbs: true,
+				addMore: true,
+				allowDuplicates: false,
+				extensions: ["pdf", "doc", "docx"],
+				limit: 1,
+				addMore: false,
+				fileMaxSize: 1024,
+				captions: {
+					button: "Upload CV",
+					errors: {
+						filesType: "Only DOC, DOCX, PDF are allowed to be uploaded.",
+					}
+				}
+			});
+		});
+	</script>
 </body>
 
 </html>
